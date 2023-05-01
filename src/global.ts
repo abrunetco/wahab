@@ -1,0 +1,138 @@
+import { createGlobalStyle } from 'styled-components'
+
+const GlobalStyles = createGlobalStyle`
+  @font-face{
+    font-family: "SuisseIntl";
+    src: url("${require('./fonts/SuisseIntl-Regular.ttf').default}") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family: "SuisseIntl";
+    src: url("${require('./fonts/SuisseIntl-Medium.ttf').default}") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family: "SuisseIntl";
+    src: url("${require('./fonts/SuisseIntl-SemiBold.ttf').default}") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  /* reset */
+
+  *,
+  *:before,
+  *:after {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  ul,
+  ol {
+    list-style: none;
+  }
+
+  blockquote,
+  q {
+    quotes: none;
+  }
+
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+
+  i,
+  b {
+    font-style: normal;
+  }
+
+  img,
+  video {
+    border-style: none;
+    max-width: 100%;
+    display: block;
+  }
+
+  svg {
+    border: none !important;
+  }
+
+  /* global */
+
+  * {
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body {
+    font-size: 14px;
+    line-height: 20px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-size-adjust: 100%;
+    overflow: hidden;
+  }
+
+  #root {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+
+  :focus {
+    outline: none;
+  }
+
+  /* dispatched single taps w/o delay */
+  a,
+  area,
+  button,
+  input,
+  label,
+  select,
+  summary,
+  textarea,
+  [tabindex]:not([tabindex='-1']) {
+    touch-action: manipulation;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  a {
+    color: #000;
+  }
+`
+
+export default GlobalStyles

@@ -1,0 +1,12 @@
+{
+    "processors": [
+        "stylelint-processor-styled-components"
+    ],
+    "extends": "stylelint-config-standard",
+    "syntax": "scss",
+    "rules": {
+        "indentation": 4,
+        "selector-type-no-unknown": null,
+        "selector-type-case": null
+    }
+}
