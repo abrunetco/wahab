@@ -1,11 +1,17 @@
 import { CSSProperties } from "react"
 import { mixinMap, mappedProps } from "./maps"
 import { Theme } from "./theme/theme"
-import { Color, Lightness } from "../constants"
+
+export type Color = keyof Theme['palette']
+export type Lightness = keyof Theme['lightness']
 
 interface IColor {
   v: Color
   l: Lightness
+}
+
+export function isIColor(c: ColorProp): c is IColor {
+  return typeof c === 'object' && 'v' in c
 }
 
 export type ColorProp = Color | IColor

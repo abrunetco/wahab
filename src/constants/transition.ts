@@ -1,1 +1,0 @@
-export const STANDARD = '300ms';
