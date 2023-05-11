@@ -1,6 +1,9 @@
 
+type FFamilies = "SuisseIntl"
+export type FontStyle = { family: FFamilies, size: number, weight: number, lineHeight: number }
 export interface Theme {
   size: number,
+  bgName: keyof Theme['palette']
   palette: {
     black: string
     white: string
@@ -11,15 +14,26 @@ export interface Theme {
     warn: string
     danger: string
   }
-  space: {
-    node: number
-    xxxs: number
+  spacing: {
+    none: number
     xxs: number
     xs: number
+    s: number
     m: number
+    l: number
     xl: number
     xxl: number
-    xxxl: number
+  }
+  round: {
+    none: number
+    xxs: number
+    xs: number
+    s: number
+    m: number
+    l: number
+    xl: number
+    xxl: number
+    circle: number
   }
   lightness: {
     lightest: number
@@ -29,22 +43,26 @@ export interface Theme {
     darker: number
     darkest: number
   },
-  fontSize: {
-    small: number
-    standard: number
-    large: number
+  shadowColor: keyof Theme['palette']
+  shadowSize: {
+    none: number
+    1: number
+    2: number
+    3: number
+  },
+  typography: {
+    heading1: FontStyle
+    heading2: FontStyle
+    heading3: FontStyle
+    default: FontStyle
+    note: FontStyle
   }
 }
-export const LIGHTEST = -0.5;
-export const LIGHTER = -0.25;
-export const LIGHT = -0.1;
-
-export const DARK = 0.1;
-export const DARKER = 0.25;
-export const DARKEST = 0.5;
 
 export const light: Theme = {
   size: 16,
+  bgName: 'white',
+  shadowColor: 'black',
   palette: {
     black: '#000',
     white: '#fff',
@@ -55,15 +73,26 @@ export const light: Theme = {
     warn: '#faff00',
     danger: '#ff0000',
   },
-  space: {
-    node: 0,
-    xxxs: 1,
-    xxs: 3,
-    xs: 5,
-    m: 10,
-    xl: 20,
-    xxl: 40,
-    xxxl: 100,
+  spacing: {
+    none: 0,
+    xxs: .25,
+    xs: .375,
+    s: .5,
+    m: .75,
+    l: .875,
+    xl: 1.25,
+    xxl: 1.5,
+  },
+  round: {
+    none: 1,
+    xxs: 1,
+    xs: 1,
+    s: 1,
+    m: 1,
+    l: 1,
+    xl: 1,
+    xxl: 1,
+    circle: 1
   },
   lightness: {
     lightest: -0.5,
@@ -73,15 +102,50 @@ export const light: Theme = {
     darker: 0.25,
     darkest: 0.5,
   },
-  fontSize: {
-    small: 0.75,
-    standard: 1,
-    large: 2
-  }
+  shadowSize: {
+    none: 0,
+    1: 1,
+    2: 2,
+    3: 3,
+  },
+  typography: {
+    heading1: {
+      family: "SuisseIntl",
+      size: 4,
+      weight: 100,
+      lineHeight: 5
+    },
+    heading2: {
+      family: "SuisseIntl",
+      size: 2,
+      weight: 100,
+      lineHeight: 4
+    },
+    heading3: {
+      family: "SuisseIntl",
+      size: 1.5,
+      weight: 100,
+      lineHeight: 3
+    },
+    default: {
+      family: "SuisseIntl",
+      size: 1,
+      weight: 100,
+      lineHeight: 2
+    },
+    note: {
+      family: "SuisseIntl",
+      size: .5,
+      weight: 100,
+      lineHeight: 1
+    },
+  },
 }
 
 export const dark: Theme = {
-  size: 16,
+  ...light,
+  bgName: "black",
+  shadowColor: 'white',
   palette: {
     black: '#fff',
     white: '#000',
@@ -92,27 +156,4 @@ export const dark: Theme = {
     warn: '#faff00',
     danger: '#ff0000',
   },
-  space: {
-    node: 0,
-    xxxs: 1,
-    xxs: 3,
-    xs: 5,
-    m: 10,
-    xl: 20,
-    xxl: 40,
-    xxxl: 100,
-  },
-  lightness: {
-    lightest: -0.5,
-    lighter: -0.25,
-    light: -0.1,
-    dark: 0.1,
-    darker: 0.25,
-    darkest: 0.5,
-  },
-  fontSize: {
-    small: 0.75,
-    standard: 1,
-    large: 2
-  }
 }

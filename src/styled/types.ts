@@ -1,11 +1,44 @@
 import { CSSProperties } from "react"
 import { mixinMap, mappedProps } from "./maps"
 import { Theme } from "./theme/theme"
-import { Color, Lightness } from "../constants"
+
+
+export type Space = {
+  all?: keyof Theme['spacing']
+  s?: keyof Theme['spacing']
+  e?: keyof Theme['spacing']
+  t?: keyof Theme['spacing']
+  b?: keyof Theme['spacing']
+  x?: keyof Theme['spacing']
+  y?: keyof Theme['spacing']
+}
+
+export type Round = {
+  all?: keyof Theme['spacing']
+  st?: keyof Theme['spacing']
+  et?: keyof Theme['spacing']
+  eb?: keyof Theme['spacing']
+  sb?: keyof Theme['spacing']
+  s?: keyof Theme['spacing']
+  e?: keyof Theme['spacing']
+  t?: keyof Theme['spacing']
+  b?: keyof Theme['spacing']
+}
+
+export type Shadow = keyof Theme["shadowSize"]
+
+export type Color = keyof Theme['palette']
+export type Lightness = keyof Theme['lightness']
+
+export type Typography = keyof Theme['typography']
 
 interface IColor {
   v: Color
   l: Lightness
+}
+
+export function isIColor(c: ColorProp): c is IColor {
+  return typeof c === 'object' && 'v' in c
 }
 
 export type ColorProp = Color | IColor
@@ -15,6 +48,9 @@ export type SpecialArgTypes = {
   size: Size
   sizes: Size[] | Size
   color: ColorProp
+  spacing: Space
+  round: Round
+  shadow: Shadow
 }
 
 export type Mixins = typeof mixinMap
