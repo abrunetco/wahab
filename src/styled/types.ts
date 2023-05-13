@@ -1,56 +1,70 @@
 import { CSSProperties } from "react"
 import { mixinMap, mappedProps } from "./maps"
 import { Theme } from "./theme/theme"
+import { fontStyles } from "./mixins"
 
+type FFamilies = "SuisseIntl"
+type FDecor = "upper" | "lower" | "start" 
+type FWeight = 400 | 500 | 700 
+export type FontStyle = { family: FFamilies, size: number, weight: FWeight, lineHeight: number, decor?: FDecor }
 
-export type Space = {
-  all?: keyof Theme['spacing']
-  s?: keyof Theme['spacing']
-  e?: keyof Theme['spacing']
-  t?: keyof Theme['spacing']
-  b?: keyof Theme['spacing']
-  x?: keyof Theme['spacing']
-  y?: keyof Theme['spacing']
-}
-
-export type Round = {
-  all?: keyof Theme['spacing']
-  st?: keyof Theme['spacing']
-  et?: keyof Theme['spacing']
-  eb?: keyof Theme['spacing']
-  sb?: keyof Theme['spacing']
-  s?: keyof Theme['spacing']
-  e?: keyof Theme['spacing']
-  t?: keyof Theme['spacing']
-  b?: keyof Theme['spacing']
-}
+export type Space = keyof Theme['spacing']
+export type Round = keyof Theme['round']
 
 export type Shadow = keyof Theme["shadowSize"]
-
 export type Color = keyof Theme['palette']
 export type Lightness = keyof Theme['lightness']
-
 export type Typography = keyof Theme['typography']
+export type BorderSize = keyof Theme['borderSizes']
 
-interface IColor {
+export interface IColor {
   v: Color
   l: Lightness
+}
+
+export type ColorProp = Color | IColor
+export type Size = number | string
+
+export interface IBorder {
+  s: BorderSize
+  c: ColorProp
+  mode?: keyof ISpace
+}
+
+export interface ISpace {
+  all?: Space
+  s?: Space
+  e?: Space
+  t?: Space
+  b?: Space
+  x?: Space
+  y?: Space
+}
+
+export interface IRound {
+  all?: Round
+  st?: Round
+  et?: Round
+  eb?: Round
+  sb?: Round
+  s?: Round
+  e?: Round
+  t?: Round
+  b?: Round
 }
 
 export function isIColor(c: ColorProp): c is IColor {
   return typeof c === 'object' && 'v' in c
 }
 
-export type ColorProp = Color | IColor
-export type Size = number | string
-
 export type SpecialArgTypes = {
   size: Size
   sizes: Size[] | Size
-  color: ColorProp
-  spacing: Space
-  round: Round
   shadow: Shadow
+  color: ColorProp
+  spacing: ISpace
+  round: IRound
+  border: IBorder
 }
 
 export type Mixins = typeof mixinMap

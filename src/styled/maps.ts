@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import * as mixins from './mixins'
-import { SpecialArgTypes, Mapper, isIColor, Color, Lightness, Typography } from './types'
+import { SpecialArgTypes, Mapper, isIColor, Color, Lightness, Typography, IBorder } from './types'
 import ColorFactory from 'color'
 import { Theme } from './theme/theme'
 
@@ -52,12 +52,17 @@ export const mappers: {
     const color = ColorFactory(theme.palette[theme.shadowColor]).alpha(0.5).hexa()
     return `${size} ${size} ${blur} ${color}`
   },
+  border: (b, theme) => {
+    let color = mappers.color(b.c, theme)
+    let size = theme.borderSizes[b.s] + 'px'
+    return `${size} solid ${color}`
+  },
 }
 
 export const mixinMap = {
   center: (t: boolean) => t && mixins.center,
   autoColor: (t: boolean) => t && mixins.autoColor,
-  typo: (t: Typography) => t && mixins.fontStyles(t)
+  typo: (t: Typography) => t && mixins.fontStyles(t),
 }
 
 export const mappedProps /*: P*/ = {
@@ -71,6 +76,10 @@ export const mappedProps /*: P*/ = {
   backgroundColor: mappers.color,
   borderColor: mappers.color,
   padding: mappers.spacing,
-  borderRadius: mappers.spacing,
+  borderRadius: mappers.round,
   boxShadow: mappers.shadow,
+  borderRight: mappers.border,
+  borderLeft: mappers.border,
+  borderTop: mappers.border,
+  borderBottom: mappers.border,
 }

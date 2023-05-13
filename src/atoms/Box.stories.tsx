@@ -22,6 +22,8 @@ const meta: Meta<typeof Box> = {
     height: { control: 'number' },
     lvl: { control: 'select', options: Object.keys(light.shadowSize) },
     typo: { control: 'select', options: Object.keys(light.typography) },
+    "border.s": { control: 'select', options: Object.keys(light.borderSizes) },
+    "border.c": { control: 'select', options: Object.keys(light.palette) },
     'padding.all': { control: 'select', options: Object.keys(light.spacing) },
     'rounded.all': { control: 'select', options: Object.keys(light.round) },
     'bg.v': { control: 'select', options: Object.keys(light.palette) },

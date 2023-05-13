@@ -1,6 +1,9 @@
+import { FontStyle } from "../types"
 
-type FFamilies = "SuisseIntl"
-export type FontStyle = { family: FFamilies, size: number, weight: number, lineHeight: number }
+const GOLDEN_RATIO = 1.618033
+const GOLDEN_FRICTION = 10
+const golden = (n: number) => Math.round(Math.pow(GOLDEN_RATIO, n) * GOLDEN_FRICTION) / GOLDEN_FRICTION / 16
+
 export interface Theme {
   size: number,
   bgName: keyof Theme['palette']
@@ -16,6 +19,7 @@ export interface Theme {
   }
   spacing: {
     none: number
+    xxxs: number
     xxs: number
     xs: number
     s: number
@@ -23,6 +27,7 @@ export interface Theme {
     l: number
     xl: number
     xxl: number
+    xxxl: number
   }
   round: {
     none: number
@@ -43,6 +48,11 @@ export interface Theme {
     darker: number
     darkest: number
   },
+  borderSizes: {
+    1: number
+    2: number
+    3: number
+  }
   shadowColor: keyof Theme['palette']
   shadowSize: {
     none: number
@@ -73,26 +83,33 @@ export const light: Theme = {
     warn: '#faff00',
     danger: '#ff0000',
   },
+  borderSizes: {
+    1: 1,
+    2: 2,
+    3: 3,
+  },
   spacing: {
     none: 0,
-    xxs: .25,
-    xs: .375,
-    s: .5,
-    m: .75,
-    l: .875,
-    xl: 1.25,
-    xxl: 1.5,
+    xxxs: golden(1),
+    xxs: golden(2),
+    xs: golden(3),
+    s: golden(4),
+    m: golden(5),
+    l: golden(6),
+    xl: golden(7),
+    xxl: golden(8),
+    xxxl: golden(9),
   },
   round: {
-    none: 1,
+    none: 0,
     xxs: 1,
-    xs: 1,
-    s: 1,
-    m: 1,
-    l: 1,
-    xl: 1,
-    xxl: 1,
-    circle: 1
+    xs: 2,
+    s: 3,
+    m: 4,
+    l: 5,
+    xl: 6,
+    xxl: 10,
+    circle: 10000
   },
   lightness: {
     lightest: -0.5,
@@ -112,32 +129,36 @@ export const light: Theme = {
     heading1: {
       family: "SuisseIntl",
       size: 4,
-      weight: 100,
-      lineHeight: 5
+      weight: 700,
+      lineHeight: 5,
+      decor: "upper"
     },
     heading2: {
       family: "SuisseIntl",
       size: 2,
-      weight: 100,
-      lineHeight: 4
+      weight: 700,
+      lineHeight: 4,
+      decor: "start"
     },
     heading3: {
       family: "SuisseIntl",
       size: 1.5,
-      weight: 100,
-      lineHeight: 3
+      weight: 500,
+      lineHeight: 3,
+      decor: "start"
     },
     default: {
       family: "SuisseIntl",
       size: 1,
-      weight: 100,
+      weight: 400,
       lineHeight: 2
     },
     note: {
       family: "SuisseIntl",
       size: .5,
-      weight: 100,
-      lineHeight: 1
+      weight: 400,
+      lineHeight: 1,
+      decor: "lower"
     },
   },
 }
