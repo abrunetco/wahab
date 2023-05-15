@@ -1,6 +1,6 @@
-import styl from "../styled"
-import { Theme } from "../styled/theme/theme"
-import { ColorProp, IRound, Shadow, ISpace, StyleSystemSheet, Typography, IBorder } from "../styled/types"
+import styl from "../../styled"
+import { Theme } from "../../styled/theme/theme"
+import { ColorProp, IRound, Shadow, ISpace, StyleSystemSheet, Typography, IBorder } from "../../styled/types"
 
 export type Size = number | string
 

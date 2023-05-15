@@ -1,9 +1,9 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react';
-import {light} from '../styled/theme/theme'
+import {light} from '../../styled/theme/theme'
 
 import {Box} from './Box';
-import { unflatArgs } from '../utils/flatt-args';
+import { unflatArgs } from '../../utils/flatt-args';
 
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
