@@ -1,10 +1,14 @@
 import styl from "../../styled"
 import { Theme } from "../../styled/theme/theme"
-import { ColorProp, IRound, Shadow, ISpace, StyleSystemSheet, Typography, IBorder } from "../../styled/types"
-
-export type Size = number | string
+import { ColorProp, IRound, Shadow, ISpace, StyleSystemSheet, Typography, IBorder, Size } from "../../styled/types"
 
 export interface BoxProps {
+  center: boolean,
+  inline: boolean,
+  flex: boolean,
+  grow?: number
+  shrink?: number
+  basis?: Size
   width?: Size
   height?: Size
   minWidth?: Size
@@ -18,11 +22,6 @@ export interface BoxProps {
   lvl?: Shadow
   typo?: Typography
   border?: IBorder
-}
-
-const staticBoxProps: StyleSystemSheet = {
-  display: 'block',
-  center: true,
 }
 
 const borderMap = {
@@ -39,6 +38,13 @@ function hasBorder(side: keyof typeof borderMap, border?: IBorder): boolean {
 export const boxStyles = (props: BoxProps & { theme: Theme }): StyleSystemSheet => {
   
   return [
+    props.center && { center: true },
+    props.inline && { display: 'inline' },
+    props.flex && { display: 'flex' },
+    (props.inline && props.flex) && { display: 'inline-flex' },
+    props.grow && { flexGrow: props.grow },
+    props.shrink && { flexShrink: props.shrink },
+    props.basis && { flexBasis: props.basis },
     props.typo && { typo: props.typo },
     hasBorder('r', props.border) && { borderRight: props.border },
     hasBorder('l', props.border) && { borderLeft: props.border },
@@ -57,4 +63,4 @@ export const boxStyles = (props: BoxProps & { theme: Theme }): StyleSystemSheet 
     props.color ? { color: props.color } : { autoColor: true },
   ]
 }
-export const Box = styl('div', boxStyles, staticBoxProps)
+export const Box = styl('div', boxStyles)

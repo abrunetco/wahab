@@ -1,8 +1,7 @@
 import { css } from 'styled-components'
 import { mappers } from './maps'
 import ColorFactory from 'color'
-import { ColorProp, IBorder, SpecialArgTypes, Typography } from './types'
-import { Theme, light } from './theme/theme'
+import { ColorProp, Typography } from './types'
 import _ from 'lodash'
 
 export const center = css`
@@ -16,9 +15,9 @@ export const autoColor = css`
     const bg = 'bg' in props ? (props['bg'] as ColorProp) : props.theme.bgName,
       bgHexColor = mappers.color(bg, props.theme),
       isDarkBg = ColorFactory(bgHexColor).isDark()
-      
+
     return mappers.color(isDarkBg ? 'white' : 'black', props.theme)
-      
+
   }};
 `
 
@@ -33,11 +32,11 @@ export const fontStyles = (t: Typography) => {
       : ''
     }
     ${props => props.theme.typography[t].decor === "lower"
-    ? `text-transform: lowercase;`
+      ? `text-transform: lowercase;`
       : ''
     }
     ${props => props.theme.typography[t].decor === "upper"
-    ? `text-transform: uppercase;`
+      ? `text-transform: uppercase;`
       : ''
     }
   `

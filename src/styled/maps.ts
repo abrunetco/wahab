@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import * as mixins from './mixins'
-import { SpecialArgTypes, Mapper, isIColor, Color, Lightness, Typography, IBorder } from './types'
+import { SpecialArgTypes, Mapper, isIColor, Color, Lightness, Typography } from './types'
 import ColorFactory from 'color'
 import { Theme } from './theme/theme'
 
@@ -12,7 +12,6 @@ export const mappers: {
   size: (s, theme) => (typeof s === 'number' ? `${theme.size * s}px` : s),
   sizes: (ss, theme) => _.castArray(ss).map((s) => mappers.size(s, theme)).join(' '),
   color: (c, theme) => {
-    
     const colorName: Color = isIColor(c) ? c.v : c
     const lightName: Lightness | undefined = isIColor(c) ? c.l : undefined
     let hexColor = ColorFactory(theme.palette[colorName])
@@ -21,6 +20,9 @@ export const mappers: {
       else hexColor = hexColor.lighten(-1 * theme.lightness[lightName])
     }
     return hexColor.hex()
+  },
+  space: (s, theme) => {
+    return `${theme.size * theme.spacing[s]}px`
   },
   spacing: (s, theme) => {
     let spaces: Array<keyof Theme['spacing']> = ["none", "none", "none", "none"]
@@ -62,7 +64,7 @@ export const mappers: {
 export const mixinMap = {
   center: (t: boolean) => t && mixins.center,
   autoColor: (t: boolean) => t && mixins.autoColor,
-  typo: (t: Typography) => t && mixins.fontStyles(t),
+  typo: (t: Typography) => t && mixins.fontStyles(t)
 }
 
 export const mappedProps /*: P*/ = {
@@ -72,10 +74,12 @@ export const mappedProps /*: P*/ = {
   maxWidth: mappers.size,
   minHeight: mappers.size,
   maxHeight: mappers.size,
+  flexBasis: mappers.size,
   color: mappers.color,
   backgroundColor: mappers.color,
   borderColor: mappers.color,
   padding: mappers.spacing,
+  gap: mappers.space,
   borderRadius: mappers.round,
   boxShadow: mappers.shadow,
   borderRight: mappers.border,

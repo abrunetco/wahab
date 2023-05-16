@@ -1,26 +1,61 @@
-import styl from "../../styled";
+
+import { CSSProperties } from "react";
+import styl, { defaults } from "../../styled";
 import { Theme } from "../../styled/theme/theme";
-import { ColorProp, StyleSystemSheet } from "../../styled/types";
-import { Size } from "../box/Box";
+import { Dictionary, IAlign, IJistify, ISpace, Space, StyleSystemSheet } from "../../styled/types";
+import { Box, BoxProps } from "../box/Box";
+
 
 export interface ContainerProps {
-  width?: Size
-  height?: Size
-  bg?: ColorProp
+  flow: 'row' | 'col'
+  wrap: boolean
+  gap: boolean | Space
+  align: IAlign
+  alignC: IAlign
+  justify: IJistify
 }
 
-const staticContainerProps: StyleSystemSheet = {
-  display: 'block',
-  center: true,
+const alignMap: Dictionary<CSSProperties['alignItems'], IAlign> = {
+  top: "start",
+  bottom: "end",
+  center: "center"
 }
 
-export const ContainerStyles = (props: ContainerProps & { theme: Theme }): StyleSystemSheet => {
+const alignCMap: Dictionary<CSSProperties['alignItems'], IAlign> = {
+  top: "start",
+  bottom: "end",
+  center: "center"
+}
+
+
+const justifyMap: Dictionary<CSSProperties['justifyContent'], IJistify> = {
+  start: "start",
+  end: "end",
+  center: "center",
+  between: "space-between"
+}
+
+export const containerStyles = (props: ContainerProps & BoxProps & { theme: Theme }): StyleSystemSheet => {
+  const gap: Space = props.gap
+    ? props.gap === true
+      ? props.padding?.all ?? 'none'
+      : props.gap
+    : 'none'
   return [
-    props.height && { height: props.height },
-    props.width && { width: props.width },
-    props.bg ? { backgroundColor: props.bg } : { backgroundColor: props.theme.bgName },
+    { gap },
+    props.flow === "col" && { flexDirection: "column" },
+    props.alignC && {alignContent: alignCMap[props.align]},
+    props.align && {alignItems: alignMap[props.align]},
+    props.justify && {justifyContent: justifyMap[props.justify]},
+    props.wrap === true && { flexWrap: "wrap" }
   ]
 }
 
 
-export const Container = styl('div', ContainerStyles, staticContainerProps)
+export const InheritedFromBox = defaults(Box.styles, {
+  width: '100%',
+  flex: true,
+})
+
+
+export const Container = styl('div', InheritedFromBox, containerStyles)

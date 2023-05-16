@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { unflatArgs } from '../../utils/flatt-args';
 import { Container } from './Container';
+import { unflatArgs } from '../../utils/flatt-args';
+import { Box } from '../box/Box';
 import { light } from '../../styled/theme/theme';
 
 
@@ -10,17 +11,28 @@ const meta: Meta<typeof Container> = {
   title: 'Atoms/Container',
   tags: ['autodocs'],
   render(args) {
+    const boxes = args.boxes
+    delete args.boxes
     const p = unflatArgs(args)
-    return <Container {...p}>
-      {/* {JSON.stringify(p['bg'])} */}
-      lorem ipsum dolor sit amet.
+    return <Container {...p} bg="active" height={15}>
+      {(new Array(boxes)).fill(0).map((n, i) => (
+        <Box
+          width= {3}
+          height= {3}
+          bg= {i%2 ? "primary" : "secondary" }
+          center
+        >{i+1}</Box>
+      ))}
     </Container>
   },
   argTypes: {
-    width: { control: 'number' },
-    height: { control: 'number' },
-    'bg.v': { control: 'select', options: Object.keys(light.palette) },
-    'bg.l': { control: 'select', options: [...Object.keys(light.lightness), null] },
+    boxes: {control: "number"},
+    wrap: {control: "boolean"},
+    'padding.all': { control: 'select', options: Object.keys(light.spacing) },
+    gap: { control: "select", options: [true, ...Object.keys(light.spacing)]},
+    align: { control: "radio", options: ["top", "center", "bottom"]},
+    justify: { control: "radio", options: ["start", "end", "center", "between"]},
+    flow: { control: "radio", options: ["row", "col"]},
   }
 }
 
@@ -29,7 +41,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    width: 0,
-    height: 0
+    boxes: 10,
+    'padding.all': "m",
   }
 }
