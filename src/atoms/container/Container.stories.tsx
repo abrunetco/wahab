@@ -31,6 +31,7 @@ const meta: Meta<typeof Container> = {
     'padding.all': { control: 'select', options: Object.keys(light.spacing) },
     gap: { control: "select", options: [true, ...Object.keys(light.spacing)]},
     align: { control: "radio", options: ["top", "center", "bottom"]},
+    alignC: { control: "radio", options: ["top", "center", "bottom"]},
     justify: { control: "radio", options: ["start", "end", "center", "between"]},
     flow: { control: "radio", options: ["row", "col"]},
   }

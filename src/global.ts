@@ -89,7 +89,7 @@ const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-size-adjust: 100%;
-    overflow: hidden;
+    overflow: auto;
   }
 
   #root {

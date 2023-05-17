@@ -8,6 +8,7 @@ export interface Theme {
   size: number,
   bgName: keyof Theme['palette']
   palette: {
+    body: string
     black: string
     white: string
     primary: string
@@ -74,14 +75,15 @@ export const light: Theme = {
   bgName: 'white',
   shadowColor: 'black',
   palette: {
-    black: '#000',
-    white: '#fff',
-    primary: '#0500ff',
-    secondary: '#b600ff',
-    active: '#009fff',
-    success: '#00ff97',
-    warn: '#faff00',
-    danger: '#ff0000',
+    body: '#D8F9F0',
+    black: '#17363B',
+    white: '#FFFFFF',
+    primary: '#17363B',
+    secondary: '#12DB8B',
+    active: '#0087F5',
+    success: '#0C9C62',
+    warn: '#FF6D00',
+    danger: '#FF1616',
   },
   borderSizes: {
     1: 1,
@@ -168,13 +170,14 @@ export const dark: Theme = {
   bgName: "black",
   shadowColor: 'white',
   palette: {
-    black: '#fff',
-    white: '#000',
-    primary: '#b600ff',
-    secondary: '#0500ff',
-    active: '#009fff',
+    body: '#17363B',
+    black: '#17363B',
+    white: '#FFFFFF',
+    primary: '#D8F9F0',
+    secondary: '#12DB8B',
+    active: '#0087F5',
     success: '#00ff97',
-    warn: '#faff00',
-    danger: '#ff0000',
+    warn: '#FF6D00',
+    danger: '#FF1616',
   },
 }
