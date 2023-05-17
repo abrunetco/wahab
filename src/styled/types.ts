@@ -8,6 +8,9 @@ type FDecor = "upper" | "lower" | "start"
 type FWeight = 400 | 500 | 700 
 export type FontStyle = { family: FFamilies, size: number, weight: FWeight, lineHeight: number, decor?: FDecor }
 
+export type IAlign = "top" | "bottom" | "center"
+export type IJistify = "start" | "end" | "center" | "between"
+
 export type Space = keyof Theme['spacing']
 export type Round = keyof Theme['round']
 
@@ -30,6 +33,7 @@ export interface IBorder {
   c: ColorProp
   mode?: keyof ISpace
 }
+
 
 export interface ISpace {
   all?: Space
@@ -63,6 +67,7 @@ export type SpecialArgTypes = {
   shadow: Shadow
   color: ColorProp
   spacing: ISpace
+  space: Space
   round: IRound
   border: IBorder
 }
@@ -109,3 +114,7 @@ export type MergeSheets<A> = A extends any[] ? UTI<GetSheetProps<A[number]>> : G
 export type FunctionSheet<T extends any = any> =
   | StyleSystemSheet
   | ((props: T) => StyleSystemSheet)
+
+  export type Dictionary<T, K extends string = string> = {
+    [key in K]: T
+  }

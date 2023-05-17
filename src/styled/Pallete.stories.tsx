@@ -1,6 +1,6 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react';
-import {Box} from '../atoms/Box';
+import {Box} from '../atoms/box/Box';
 import { Theme } from "./theme/theme"
 import {light} from '../styled/theme/theme'
 
