@@ -12,14 +12,19 @@ export const mappers: {
   size: (s, theme) => (typeof s === 'number' ? `${theme.size * s}px` : s),
   sizes: (ss, theme) => _.castArray(ss).map((s) => mappers.size(s, theme)).join(' '),
   color: (c, theme) => {
+    
     const colorName: Color = isIColor(c) ? c.v : c
     const lightName: Lightness | undefined = isIColor(c) ? c.l : undefined
+    const alpha: Lightness | undefined = isIColor(c) ? c.a : undefined
     let hexColor = ColorFactory(theme.palette[colorName])
     if (lightName) {
       if (theme.lightness[lightName] > 0) hexColor = hexColor.darken(theme.lightness[lightName])
       else hexColor = hexColor.lighten(-1 * theme.lightness[lightName])
     }
-    return hexColor.hex()
+    if (alpha) {
+      hexColor = hexColor.alpha(theme.alpha[alpha])
+    }
+    return hexColor.hexa()
   },
   space: (s, theme) => {
     return `${theme.size * theme.spacing[s]}px`
@@ -63,6 +68,9 @@ export const mappers: {
 
 export const mixinMap = {
   center: (t: boolean) => t && mixins.center,
+  hoverStyles: (t: boolean) => t && mixins.hoverStyles,
+  inputFocus: (t: boolean) => t && mixins.inputFocus,
+  disableStyles: (t: boolean) => t && mixins.disableStyles,
   autoColor: (t: boolean) => t && mixins.autoColor,
   typo: (t: Typography) => t && mixins.fontStyles(t)
 }

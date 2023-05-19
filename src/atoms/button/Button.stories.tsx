@@ -1,8 +1,8 @@
-import React from 'react';
-import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from "./Button"
-import { unflatArgs } from '../../utils/flatt-args';
-import { light } from "../../styled/theme/theme"
+import React from "react";
+import { Meta, StoryObj } from "@storybook/react";
+import { Button } from "./Button";
+import { unflatArgs } from "../../utils/flatt-args";
+import { light } from "../../styled/theme/theme";
 
 
 const meta: Meta<typeof Button> = {
@@ -17,6 +17,7 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     width: { control: 'number' },
     block: { control: 'boolean' },
+    disable: { control: 'boolean' },
     lvl: { control: 'select', options: Object.keys(light.shadowSize) },
     'padding.all': { control: 'select', options: Object.keys(light.spacing) },
     'rounded.all': { control: 'select', options: Object.keys(light.round) },
@@ -37,7 +38,6 @@ export const Primary: Story = {
     'bg.v': "primary",
     'rounded.all': "m",
     lvl: 1,
-    width: "25%"
   }
 }
 
@@ -47,7 +47,6 @@ export const Danger: Story = {
     'bg.v': "danger",
     'rounded.all': "m",
     lvl: 1,
-    width: "25%"
   }
 }
 
@@ -57,7 +56,6 @@ export const Warning: Story = {
     'bg.v': "warn",
     'rounded.all': "m",
     lvl: 1,
-    width: "25%"
   }
 }
 
@@ -67,7 +65,6 @@ export const Active: Story = {
     'bg.v': "active",
     'rounded.all': "m",
     lvl: 1,
-    width: "25%"
   }
 }
 
@@ -77,7 +74,6 @@ export const Successs: Story = {
     'bg.v': "success",
     'rounded.all': "m",
     lvl: 1,
-    width: "25%"
   }
 }
 

@@ -17,12 +17,14 @@ export type Round = keyof Theme['round']
 export type Shadow = keyof Theme["shadowSize"]
 export type Color = keyof Theme['palette']
 export type Lightness = keyof Theme['lightness']
+export type Alpha = keyof Theme['alpha']
 export type Typography = keyof Theme['typography']
 export type BorderSize = keyof Theme['borderSizes']
 
 export interface IColor {
   v: Color
-  l: Lightness
+  l?: Lightness
+  a?: Alpha
 }
 
 export type ColorProp = Color | IColor

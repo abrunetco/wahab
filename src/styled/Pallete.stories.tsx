@@ -16,12 +16,23 @@ const meta: Meta<typeof Box> = {
             <Box center bg={v} width={6} height={3}>
               {v}
             </Box>
-            <Box width={1} height={3}/>
+            <Box width={0.2} height={3}/>
             {Object.keys(light.lightness).map((l) => (
               <Box center key={l} bg={{v, l}} width={3} height={3}>
                 {v === args.color && l === args.light ? 'here' : ''}
               </Box>
             ))}
+            <Box width={0.2} height={3}/>
+            {['active', 'success', 'warn', 'danger'].includes(v) && (
+              <Box
+                center
+                bg={{ v, a: 'lightest'  }}
+                width={6}
+                height={3}
+              >
+                {v}
+              </Box>
+            )}
           </div>
         ))}
       </div>

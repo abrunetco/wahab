@@ -7,9 +7,9 @@ import {
 import { Theme, light } from './theme'
 import GlobalStyles from '../../global'
 
-export function ThemeProvider({ children }: { children: ReactNode }) {
+export function ThemeProvider({ children, theme }: { children: ReactNode, theme: Theme }) {
   return (
-    <StyledThemeProvider theme={light}>
+    <StyledThemeProvider theme={theme ?? light}>
       <GlobalStyles/>
       {children}
     </StyledThemeProvider>

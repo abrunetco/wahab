@@ -1,4 +1,4 @@
-import { FontStyle } from "../types"
+import { ColorProp, FontStyle } from "../types"
 
 const GOLDEN_RATIO = 1.618033
 const GOLDEN_FRICTION = 10
@@ -6,7 +6,8 @@ const golden = (n: number) => Math.round(Math.pow(GOLDEN_RATIO, n) * GOLDEN_FRIC
 
 export interface Theme {
   size: number,
-  bgName: keyof Theme['palette']
+  bgName: ColorProp
+  defaultBtnBgName: ColorProp
   palette: {
     body: string
     black: string
@@ -49,6 +50,11 @@ export interface Theme {
     darker: number
     darkest: number
   },
+  alpha: {
+    lightest: number
+    lighter: number
+    light: number
+  },
   borderSizes: {
     1: number
     2: number
@@ -73,6 +79,7 @@ export interface Theme {
 export const light: Theme = {
   size: 16,
   bgName: 'white',
+  defaultBtnBgName: 'secondary',
   shadowColor: 'black',
   palette: {
     body: '#D8F9F0',
@@ -120,6 +127,11 @@ export const light: Theme = {
     dark: 0.1,
     darker: 0.25,
     darkest: 0.5,
+  },
+  alpha: {
+    lightest: 0.5,
+    lighter: 0.25,
+    light: 0.1,
   },
   shadowSize: {
     none: 0,

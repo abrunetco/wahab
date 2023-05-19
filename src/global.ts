@@ -1,4 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
+import { mappers } from './styled/maps'
+import { Theme } from './styled/theme/theme'
 
 const GlobalStyles = createGlobalStyle`
   @font-face{
@@ -90,6 +92,7 @@ const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     text-size-adjust: 100%;
     overflow: auto;
+    background-color: ${(props: { theme: Theme }) => mappers.color(props.theme.bgName, props.theme)}!important;
   }
 
   #root {

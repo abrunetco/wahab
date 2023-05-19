@@ -41,3 +41,27 @@ export const fontStyles = (t: Typography) => {
     }
   `
 }
+
+export const hoverStyles = css`&:hover { background-color: ${props => {
+  console.log('hoverStyles', props);
+  const bg = 'bg' in props ? (props['bg'] as ColorProp) : props.theme.defaultBtnBgName,
+  bgHexColor = mappers.color(bg, props.theme),
+  bgColor = ColorFactory(bgHexColor)
+  return bgColor.isDark() ? bgColor.lighten(0.2).hex() : bgColor.darken(0.4).hex()
+}} }`
+
+export const disableStyles = css`
+  &,
+  & * {
+    opacity: 0.75;
+    filter: saturate(0.75);
+    cursor: not-allowed !important;
+  }
+  `
+
+export const inputFocus = css`
+  &:focus { 
+    box-shadow: 0px 0px 2px 2px #CED4DB;
+    // background-color: #ced4db1c;
+  }
+`
