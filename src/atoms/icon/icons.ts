@@ -1,1 +1,1 @@
-export * from '../../hackaton/dist-sample'
+export * from './icons'
