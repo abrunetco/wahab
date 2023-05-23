@@ -3,7 +3,7 @@ import _ from 'lodash'
 import styled, { css } from 'styled-components'
 
 import icons from './icons'
-import { styl } from '../../styles'
+import styl from '../../styled'
 
 export const iconNames = _.keys(icons)
 export type IconName = keyof typeof icons
