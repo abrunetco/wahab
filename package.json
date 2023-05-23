@@ -4,6 +4,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
+    "gen:svg": "node ./scripts/svg-iconpack.js",
     "dev": "yarn run storybook",
     "build": "rimraf dist/ && yarn build:lib",
     "build:lib": "tsc --outDir dist/",
@@ -75,6 +76,7 @@
   "dependencies": {
     "clean-react-props": "^0.4.0",
     "color": "^4.2.3",
+    "fs": "^0.0.1-security",
     "style-object-to-css-string": "^1.0.1",
     "styled-components": "^5.3.10"
   }
