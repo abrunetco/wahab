@@ -2,7 +2,7 @@ import React, { memo, forwardRef, ComponentProps } from 'react'
 import _ from 'lodash'
 import styled, { css } from 'styled-components'
 
-import icons from './icons'
+import * as icons from './icons'
 import styl from '../../styled'
 
 export const iconNames = _.keys(icons)

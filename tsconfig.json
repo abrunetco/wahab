@@ -27,7 +27,7 @@
   },
   "include": [
     "src/**/*"
-  ],
+, "src/hackaton"  ],
   "exclude": [
     "node_modules/**/*",
     "src/**/*.test.tsx",
