@@ -1,3 +1,5 @@
+import home from './home'
+
 export default {
   actions: require('./actions.svg').default,
   ai: require('./ai.svg').default,
@@ -80,7 +82,7 @@ export default {
   'heading-3': require('./heading-3.svg').default,
   'help-filled': require('./help-filled.svg').default,
   help: require('./help.svg').default,
-  home: require('./home.svg').default,
+  home: home,
   'horizontal-rule': require('./horizontal-rule.svg').default,
   'inform-colored': require('./inform-colored.svg').default,
   'inform-filled': require('./inform-filled.svg').default,

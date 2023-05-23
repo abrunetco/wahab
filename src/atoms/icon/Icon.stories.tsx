@@ -10,7 +10,7 @@ const meta: Meta<typeof Icon> = {
     const p = unflatArgs(args)
     return (
       <IconStacker>
-        <Icon name="key" {...p} />
+        <Icon name="home" {...p} />
       </IconStacker>
     )
   },
