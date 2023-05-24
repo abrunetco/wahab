@@ -2,7 +2,7 @@ import React, { memo, forwardRef, ComponentProps } from 'react'
 import _ from 'lodash'
 import styled, { css } from 'styled-components'
 
-import icons from './icons'
+import * as icons from './icons'
 import styl from '../../styled'
 
 export const iconNames = _.keys(icons)
@@ -53,14 +53,14 @@ export const Icon = memo(
 Icon.displayName = 'Icon'
 
 export const IconStacker = styl('div', {
-  width: 1,
-  height: 1,
+  width: 3,
+  height: 3,
 })
 
 export const IconWrapper = styl('div', {
   position: 'absolute',
-  width: 1,
-  height: 1,
+  width: 2,
+  height: 2,
   alignItems: 'center',
   justifyContent: 'center',
   display: 'flex',
