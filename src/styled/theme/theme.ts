@@ -118,7 +118,7 @@ export const light: Theme = {
     l: 5,
     xl: 6,
     xxl: 10,
-    circle: 100,
+    circle: 1000,
   },
   lightness: {
     lightest: -0.5,

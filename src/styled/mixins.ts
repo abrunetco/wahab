@@ -65,3 +65,16 @@ export const inputFocus = css`
     // background-color: #ced4db1c;
   }
 `
+
+export const thumbnailStyle = css`
+  border: solid 1px #17363b36;
+  padding: .25rem;
+  background-color: transparent;
+  border-radius: .25rem;
+  max-width: 100%;
+`
+
+export const coverStyle = css`
+  object-fit: cover;
+  
+`

@@ -1,7 +1,7 @@
 import React from "react"
 import { Meta, StoryObj } from "@storybook/react"
 import { unflatArgs } from "../../utils/flatt-args"
-import { Badge } from "./Badge"
+import { Badge, badgeStyles } from "./Badge"
 import { light } from "../../styled/theme/theme"
 
 const meta: Meta<typeof Badge> = {
@@ -14,6 +14,7 @@ const meta: Meta<typeof Badge> = {
     )
   },
   argTypes: {
+    badgeSize: { control: 'boolean' },
     lvl: { control: 'select', options: Object.keys(light.shadowSize) },
     'padding.all': { control: 'select', options: Object.keys(light.spacing) },
     'rounded.all': { control: 'select', options: Object.keys(light.round) },
@@ -27,6 +28,11 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
+    center: true,
+    'bg.v': 'warn',
+    width: 2,
+    'padding.all': "s",
+    'rounded.all': "s"
   }
 }
 
@@ -46,7 +52,7 @@ export const Round: Story = {
     width: 2.2,
     'bg.v': "primary",
     'padding.all': "s",
-    'rounded.all': "xxl"
+    'rounded.all': "circle"
   }
 }
 

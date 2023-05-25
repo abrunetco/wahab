@@ -3,18 +3,13 @@ import { Theme } from "../../styled/theme/theme"
 import { StyleSystemSheet } from "../../styled/types"
 import { Box, BoxProps } from "../box/Box"
 
-type BadgeSize = {
-  s: string
-  m: string
-  l: string
-}
-
 export interface BadgeProps {
-  size: BadgeSize
+  badgeSize: boolean
 }
 
 export const badgeStyles = (props: BadgeProps & BoxProps & { theme: Theme }): StyleSystemSheet => {
   return [
+    props.badgeSize ? { width: '35px' } : { width: props.width }
   ]
 }
 

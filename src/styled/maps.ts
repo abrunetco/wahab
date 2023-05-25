@@ -51,7 +51,7 @@ export const mappers: {
     if (r.t) rounds = [r.t, r.t, rounds[2], rounds[3]]
     if (r.e) rounds = [rounds[0], r.e, r.e, rounds[3]]
     if (r.b) rounds = [rounds[0], rounds[1], r.b, r.b]
-    return _.map(rounds, r => `${theme.size * theme.spacing[r]}px`).join(' ')
+    return _.map(rounds, r => `${theme.size * theme.round[r]}px`).join(' ')
   },
   shadow: (sh, theme) => {
     const size = `${theme.shadowSize[sh]}px`
@@ -72,6 +72,7 @@ export const mixinMap = {
   inputFocus: (t: boolean) => t && mixins.inputFocus,
   disableStyles: (t: boolean) => t && mixins.disableStyles,
   autoColor: (t: boolean) => t && mixins.autoColor,
+  thumbnailStyle: (t: boolean) => t && mixins.thumbnailStyle,
   typo: (t: Typography) => t && mixins.fontStyles(t)
 }
 
