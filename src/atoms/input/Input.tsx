@@ -19,7 +19,7 @@ export const inputStyles = (props: InputProps & BoxProps & { theme: Theme }): St
 export const InheritedFromBox = defaults(Box.styles, {
   border: {  c: "black", s: 1 },
   padding: { all: "xs" },
-  rounded: { all: "s" },
+  rounded: { all: "xxs" },
   typo: "default"
 })
 

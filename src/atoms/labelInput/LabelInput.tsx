@@ -13,6 +13,6 @@ export const labelStyles = (props: LabelProps & BoxProps & { theme: Theme }): St
 
 export const InheritedFromBox = defaults(Box.styles, {
   padding: { all: "s" },
-  typo: "heading3"
+  typo: "default"
 })
 export const Label = styl('label', InheritedFromBox, labelStyles)
