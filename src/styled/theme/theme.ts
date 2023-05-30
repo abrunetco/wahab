@@ -5,7 +5,8 @@ const GOLDEN_FRICTION = 10
 const golden = (n: number) => Math.round(Math.pow(GOLDEN_RATIO, n) * GOLDEN_FRICTION) / GOLDEN_FRICTION / 16
 
 export interface Theme {
-  size: number,
+  name: string
+  size: number
   bgName: ColorProp
   defaultBtnBgName: ColorProp
   palette: {
@@ -77,6 +78,7 @@ export interface Theme {
 }
 
 export const light: Theme = {
+  name: 'light',
   size: 16,
   bgName: 'white',
   defaultBtnBgName: 'secondary',
@@ -179,6 +181,7 @@ export const light: Theme = {
 
 export const dark: Theme = {
   ...light,
+  name: 'dark',
   bgName: "black",
   shadowColor: 'white',
   palette: {
