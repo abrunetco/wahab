@@ -1,0 +1,71 @@
+module.exports = {
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended"
+  ],
+  parser: "@typescript-eslint/parser",
+  plugins: [
+    "@typescript-eslint"
+  ],
+  rules: {
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": [
+      "error"
+    ],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": [
+      "error"
+    ],
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [
+          ".tsx"
+        ]
+      }
+    ],
+    "complexity": [
+      "error",
+      10
+    ],
+    "no-await-in-loop": "warn",
+    "no-eval": "error",
+    "no-implied-eval": "error",
+    "prefer-promise-reject-errors": "warn",
+    "semi": ["error", "never"],
+    "indent": ["error", 2],
+    "space-before-function-paren": ["error", "always"],
+    "no-trailing-spaces": ["error"],
+    "no-multi-spaces": ["error"],
+    "block-spacing": ["error", "always"],
+    "no-multiple-empty-lines": ["error", { max: 1, maxEOF: 0 }],
+    "linebreak-style": ["error", "unix"],
+    "jsx-quotes": ["error", "prefer-double"],
+    "quotes": ["error", "double"],
+    "@typescript-eslint/quotes": [
+      "error",
+      "double",
+      {
+        "allowTemplateLiterals": true
+      }
+    ],
+    "padding-line-between-statements": [
+      "error",
+      { blankLine: "always", prev: "*", next: "return" },
+      { blankLine: "always", prev: ["const", "let", "var"], next: "*"},
+      { blankLine: "any", prev: ["const", "let", "var"], next: ["const", "let", "var"]},
+      { blankLine: "always", prev: "directive", next: "*" },
+      { blankLine: "any", prev: "directive", next: "directive" }
+    ],
+    "no-var": ["error"]
+  },
+  env: {
+    browser: true
+  },
+  settings: {
+    react: {
+      pragma: "React"
+    }
+  }
+}
