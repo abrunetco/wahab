@@ -1,7 +1,6 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { Box } from '../atoms/box/Box'
-import { Theme } from './theme/theme'
 import { light } from '../styled/theme/theme'
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
