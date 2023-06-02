@@ -1,25 +1,29 @@
-import { createGlobalStyle } from 'styled-components'
-import { mappers } from './styled/maps'
-import { Theme } from './styled/theme/theme'
+import { createGlobalStyle } from "styled-components"
+import { mappers } from "./styled/maps"
+import { Theme } from "./styled/theme/theme"
+
+const RegularSuisseIntl = require("./fonts/SuisseIntl-Regular.ttf")
+const MediumSuisseIntl = require("./fonts/SuisseIntl-Medium.ttf")
+const SemiBoldSuisseIntl = require("./fonts/SuisseIntl-SemiBold.ttf")
 
 const GlobalStyles = createGlobalStyle`
   @font-face{
     font-family: "SuisseIntl";
-    src: url("${require('./fonts/SuisseIntl-Regular.ttf').default}") format("truetype");
+    src: url("${RegularSuisseIntl.default}") format("truetype");
     font-weight: 400;
     font-style: normal;
   }
 
   @font-face{
     font-family: "SuisseIntl";
-    src: url("${require('./fonts/SuisseIntl-Medium.ttf').default}") format("truetype");
+    src: url("${MediumSuisseIntl.default}") format("truetype");
     font-weight: 500;
     font-style: normal;
   }
 
   @font-face{
     font-family: "SuisseIntl";
-    src: url("${require('./fonts/SuisseIntl-SemiBold.ttf').default}") format("truetype");
+    src: url("${SemiBoldSuisseIntl.default}") format("truetype");
     font-weight: 700;
     font-style: normal;
   }
