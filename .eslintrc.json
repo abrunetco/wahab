@@ -1,14 +1,15 @@
-module.exports = {
-  extends: [
+{
+  "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended"
   ],
-  parser: "@typescript-eslint/parser",
-  plugins: [
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
     "@typescript-eslint"
   ],
-  rules: {
+  "rules": {
+    "@typescript-eslint/no-var-requires": "off",
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": [
       "error"
@@ -39,7 +40,7 @@ module.exports = {
     "no-trailing-spaces": ["error"],
     "no-multi-spaces": ["error"],
     "block-spacing": ["error", "always"],
-    "no-multiple-empty-lines": ["error", { max: 1, maxEOF: 0 }],
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
     "linebreak-style": ["error", "unix"],
     "jsx-quotes": ["error", "prefer-double"],
     "quotes": ["error", "double"],
@@ -52,20 +53,23 @@ module.exports = {
     ],
     "padding-line-between-statements": [
       "error",
-      { blankLine: "always", prev: "*", next: "return" },
-      { blankLine: "always", prev: ["const", "let", "var"], next: "*"},
-      { blankLine: "any", prev: ["const", "let", "var"], next: ["const", "let", "var"]},
-      { blankLine: "always", prev: "directive", next: "*" },
-      { blankLine: "any", prev: "directive", next: "directive" }
+      { "blankLine": "always", "prev": "*", "next": "return" },
+      { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*"},
+      { "blankLine": "any", "prev": ["const", "let", "var"], "next": ["const", "let", "var"]},
+      { "blankLine": "always", "prev": "directive", "next": "*" },
+      { "blankLine": "any", "prev": "directive", "next": "directive" }
     ],
-    "no-var": ["error"]
+    "no-var": ["error"],
+    "no-cond-assign": ["error"],
+    "no-duplicate-imports": ["error"]
   },
-  env: {
-    browser: true
+  "env": {
+    "browser": true
   },
-  settings: {
-    react: {
-      pragma: "React"
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
     }
   }
 }

@@ -1,14 +1,13 @@
-import React, { forwardRef } from 'react'
-// @ts-ignore
-import cleanProps from 'clean-react-props'
+import React, { forwardRef } from "react"
+import cleanProps from "clean-react-props"
 
-const inputOnlyProps = ['value', 'onChange', 'name', 'placeholder'],
-  excludeProps = ['height', 'width', 'color', 'default', 'open']
+const inputOnlyProps = ["value", "onChange", "name", "placeholder"],
+  excludeProps = ["height", "width", "color", "default", "open"]
 
 type UnknownPropsWithChildren = unknown & {
   children: unknown
 }
-export default function cleaned(Component: React.ComponentType<UnknownPropsWithChildren>, input: boolean) {
+export default function cleaned (Component: React.ComponentType<UnknownPropsWithChildren>, input: boolean) {
   const Cleaned = forwardRef<unknown, UnknownPropsWithChildren>((props, ref) => {
     return (
       <Component
@@ -20,7 +19,7 @@ export default function cleaned(Component: React.ComponentType<UnknownPropsWithC
     )
   })
 
-  Cleaned.displayName = 'styl.' + (Component.displayName ?? '??')
+  Cleaned.displayName = "styl." + (Component.displayName ?? "??")
 
   return Cleaned
 }
