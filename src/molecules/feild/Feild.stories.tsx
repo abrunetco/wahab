@@ -6,13 +6,13 @@ import { unflatArgs } from "../../utils/flatt-args";
 const meta: Meta<typeof Feild> = {
   title: 'Molecules/Feild',
   tags: ['autodocs'],
-  // component: Feild,
   render(args) {
     const p = unflatArgs(args)
-    return <Feild {...p} type="number" label="hasan" />
+    return <Feild {...p} type={args.type} label={args.label} />
   },
   argTypes: {
-    label: { control: 'text' }
+    label: { control: 'text' },
+    type: { control: 'select', options: ["number", "text", "email", "image", "password"] }
   }
 }
 

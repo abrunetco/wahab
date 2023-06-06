@@ -7,6 +7,7 @@ import { InputEmail } from "../../atoms/input/Input";
 import { InputImage } from "../../atoms/input/Input";
 import { InputNumber } from "../../atoms/input/Input";
 import { InputPassword } from "../../atoms/input/Input";
+import { Text } from "../../atoms/text/Text";
 
 interface FeedbackProp {
   text: string
@@ -24,24 +25,28 @@ const Feedback = (props: FeedbackProp) => {
 }
 
 const Inputs = forwardRef((props: FeildProps, ref) => {
-  if (props.type === 'text') return <InputText {...props} ref={ref}/>
-    else if (props.type === 'email') return <InputEmail {...props} ref={ref}/>
-    else if (props.type === 'image') return <InputImage {...props} ref={ref}/>
-    else if (props.type === 'number') return <InputNumber {...props} ref={ref}/>
-    else if (props.type === 'password') return <InputPassword {...props} ref={ref}/>
-    else throw 'invalid input type'
+  if (props.type === 'text') return <InputText {...props} ref={ref} />
+  else if (props.type === 'email') return <InputEmail {...props} ref={ref} />
+  else if (props.type === 'image') return <InputImage {...props} ref={ref} />
+  else if (props.type === 'number') return <InputNumber {...props} ref={ref} />
+  else if (props.type === 'password') return <InputPassword {...props} ref={ref} />
+  else throw 'invalid input type'
 })
 
 
 export const Feild = forwardRef((props: FeildProps, ref) => {
   return (
     <Container flow='col'>
+      {props.label &&
+        <Box>
+          <Label>
+            {props.label}:
+          </Label>
+        </Box>
+      }
       <Box>
-        <Label>{props.label}:</Label>
-      </Box>
-      <Box>
-        <Inputs {...props} ref={ref}/>
-        {props.feedback && <Feedback {...props.feedback}/>}
+        <Inputs {...props} ref={ref} />
+        {props.feedback && <Feedback {...props.feedback} />}
       </Box>
     </Container>
   )

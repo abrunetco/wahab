@@ -1,11 +1,10 @@
 import { CSSProperties } from "react"
 import { mixinMap, mappedProps } from "./maps"
 import { Theme } from "./theme/theme"
-import { fontStyles } from "./mixins"
 
 type FFamilies = "SuisseIntl"
 type FDecor = "upper" | "lower" | "start" 
-type FWeight = 400 | 500 | 700 
+type FWeight = 400 | 500 | 700
 export type FontStyle = { family: FFamilies, size: number, weight: FWeight, lineHeight: number, decor?: FDecor }
 
 export type IAlign = "top" | "bottom" | "center"

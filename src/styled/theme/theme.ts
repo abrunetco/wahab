@@ -71,8 +71,12 @@ export interface Theme {
     heading1: FontStyle
     heading2: FontStyle
     heading3: FontStyle
+    heading4: FontStyle
+    heading5: FontStyle
+    heading6: FontStyle
     default: FontStyle
     note: FontStyle
+    bold: FontStyle
   }
 }
 
@@ -111,13 +115,13 @@ export const light: Theme = {
   },
   round: {
     none: 0,
-    xxs: 1,
-    xs: 2,
-    s: 3,
-    m: 4,
-    l: 5,
-    xl: 6,
-    xxl: 10,
+    xxs: .3,
+    xs: .6,
+    s: 1,
+    m: 2,
+    l: 3,
+    xl: 4,
+    xxl: 5,
     circle: 1000,
   },
   lightness: {
@@ -161,9 +165,30 @@ export const light: Theme = {
       lineHeight: 3,
       decor: "start"
     },
+    heading4: {
+      family: "SuisseIntl",
+      size: 1.3,
+      weight: 500,
+      lineHeight: 3,
+      decor: "start"
+    },
+    heading5: {
+      family: "SuisseIntl",
+      size: 1.2,
+      weight: 500,
+      lineHeight: 3,
+      decor: "start"
+    },
+    heading6: {
+      family: "SuisseIntl",
+      size: 1.1,
+      weight: 500,
+      lineHeight: 3,
+      decor: "start"
+    },
     default: {
       family: "SuisseIntl",
-      size: 1,
+      size: .9,
       weight: 400,
       lineHeight: 2
     },
@@ -173,6 +198,13 @@ export const light: Theme = {
       weight: 400,
       lineHeight: 1,
       decor: "lower"
+    },
+    bold: {
+      family: "SuisseIntl",
+      size: 1,
+      weight: 700,
+      lineHeight: 3,
+      decor: "start"
     },
   },
 }
