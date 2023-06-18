@@ -10,6 +10,7 @@
   ],
   "rules": {
     "@typescript-eslint/no-var-requires": "off",
+    "react/display-name": "off",
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": [
       "error"
