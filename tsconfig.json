@@ -6,7 +6,6 @@
     "allowJs": false,
     "jsx": "react",
     "moduleResolution": "node",
-    "rootDir": "package",
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
@@ -26,9 +25,6 @@
     ],
     "declaration": true
   },
-  "include": [
-    "packages/**/*"
-  ],
   "exclude": [
     "node_modules/**/*",
     "packages/**/*.test.tsx",
