@@ -11,11 +11,15 @@
     "publish:minor": "lerna publish minor && git commit -am \"chore: Update changelog\" && git push origin",
     "publish:patch": "lerna publish patch && git commit -am \"chore: Update changelog\" && git push origin",
     "publish:premajor": "lerna publish premajor --preid pre --pre-dist-tag pre && git commit -am \"chore: Update version and changelog\" && git push origin",
-    "publish:prerelease": "lerna publish prerelease --preid pre --pre-dist-tag pre --dist-tag pre --force-publish && git commit -am \"chore: Update version and changelog\" && git push origin"
+    "publish:prerelease": "lerna publish prerelease --preid pre --pre-dist-tag pre --dist-tag pre --force-publish && git commit -am \"chore: Update version and changelog\" && git push origin",
+    "compile": "lerna run compile",
+    "update-dependencies": "ncu -u && lerna exec -- ncu -u --dep prod,dev,optional,peer -x node-fetch,chalk,\"@sinclair/typebox\""
   },
   "dependencies": {},
   "devDependencies": {
-    "lerna": "^7.3.0"
+    "lerna": "^7.3.0",
+    "npm-check-updates": "^16.14.4",
+    "typescript": "^5.2.2"
   },
   "engines": {
     "node": ">= 14"

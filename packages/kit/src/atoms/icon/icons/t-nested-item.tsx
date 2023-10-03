@@ -1,0 +1,11 @@
+import React from "react"
+
+export const TNestedItem: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
+  return (
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name={props.name} className={props.className}>
+      <path fillRule="evenodd" clipRule="evenodd" d="M12 3C12.3491 3 12.6729 3.18204 12.8543 3.48028L16.5043 9.48028C16.6921 9.78901 16.6988 10.175 16.5217 10.49C16.3446 10.805 16.0114 11 15.65 11H8.3501C7.98874 11 7.65548 10.805 7.4784 10.49C7.30132 10.175 7.30795 9.78902 7.49576 9.48029L11.1457 3.48029C11.3271 3.18205 11.6509 3 12 3ZM12 5.92413L10.1289 9H13.8712L12 5.92413Z"/>
+      <path fillRule="evenodd" clipRule="evenodd" d="M17.5 13C15.01 13 13 15.01 13 17.5C13 19.99 15.01 22 17.5 22C19.99 22 22 19.99 22 17.5C22 15.01 19.99 13 17.5 13ZM17.5 20C16.12 20 15 18.88 15 17.5C15 16.12 16.12 15 17.5 15C18.88 15 20 16.12 20 17.5C20 18.88 18.88 20 17.5 20Z"/>
+      <path fillRule="evenodd" clipRule="evenodd" d="M5 13.5C3.89543 13.5 3 14.3954 3 15.5V19.5C3 20.6046 3.89543 21.5 5 21.5H9C10.1046 21.5 11 20.6046 11 19.5V15.5C11 14.3954 10.1046 13.5 9 13.5H5ZM5 15.5H9V19.5H5V15.5Z"/>
+    </svg>
+  )
+}
