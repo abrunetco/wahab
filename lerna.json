@@ -6,7 +6,7 @@
       "hoist": true
     },
     "publish": {
-      "allowBranch": ["crow", "dove"],
+      "allowBranch": ["alpha"],
       "message": "chore(release): publish %s",
       "conventionalCommits": true,
       "createRelease": "github"
