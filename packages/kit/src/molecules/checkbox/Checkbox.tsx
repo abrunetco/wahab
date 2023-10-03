@@ -1,11 +1,10 @@
 import React, { ComponentPropsWithoutRef, forwardRef } from "react"
 import styl from "../../styled"
-import { Icon } from "../../atoms/icon"
+// import { Icon } from "../../atoms/icon"
 import { Box } from "../../atoms/box/Box"
 import { Container } from "../../atoms/container/Container"
 import { Label } from "../../atoms/labelInput/LabelInput"
 import { InputBase } from "../../atoms/input/Input"
-import { randomUUID } from "crypto"
 import { Text } from "../text/Text"
 
 interface CheckboxProps extends ComponentPropsWithoutRef<'input'> {
@@ -27,7 +26,8 @@ export const Checkbox = forwardRef((props: CheckboxProps, ref) => {
         >
           <CheckWrapper>
             <InputBase {...props} hide type="checkbox" ref={ref}/>
-            {props.checked && <Icon name="Check" />}
+            {/* DOTO: FIX AFTER ADDING ICONS */}
+            {/* {props.checked && <Icon name="Check" />} */}
           </CheckWrapper>
         </Box>
         {props.label && <Text padding="s:s">{props.label}</Text>}

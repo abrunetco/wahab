@@ -1,6 +1,6 @@
 import styl from "../../styled"
 import { Theme } from "../../styled/theme/theme"
-import { ColorProp, IRound, Shadow, ISpace, StyleSystemSheet, Typography, IBorder, Size, OverFlow } from "../../styled/types"
+import { ColorProp, Shadow, StyleSystemSheet, Typography, IBorder, Size, OverFlow, SpaceProp, RoundProp } from "../../styled/types"
 
 
 export interface MiscProps {
@@ -31,8 +31,8 @@ export interface BoxProps extends MiscProps {
   maxHeight?: Size
   color?: ColorProp
   bg?: ColorProp
-  padding?: ISpace
-  rounded?: IRound
+  padding?: SpaceProp
+  rounded?: RoundProp
   lvl?: Shadow
   typo?: Typography
   border?: IBorder

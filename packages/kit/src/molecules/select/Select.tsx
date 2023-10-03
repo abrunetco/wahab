@@ -3,7 +3,6 @@ import { Theme } from "../../styled/theme/theme"
 import { StyleSystemSheet } from "../../styled/types"
 import { Box, BoxProps } from "../../atoms/box/Box"
 import { ComponentPropsWithoutRef } from "react"
-import styled from "styled-components"
 
 export interface SelectProps extends ComponentPropsWithoutRef<'select'> {
   disable: boolean

@@ -1,4 +1,3 @@
-import styled from "styled-components"
 import styl, { defaults } from "../../styled"
 import { Theme } from "../../styled/theme/theme"
 import { StyleSystemSheet } from "../../styled/types"

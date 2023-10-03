@@ -1,9 +1,9 @@
 import _ from "lodash"
 import * as mixins from "./mixins"
-import { SpecialArgTypes, Mapper, isIColor, Color, Lightness, Typography, StyleSystemSheet, ExtendedStyleSystemSheet, isISpace, isSpaceNotion, isIRound, isRoundNotion, isColorNotion, IColor } from "./types"
+import { SpecialArgTypes, Mapper, isIColor, Typography, ExtendedStyleSystemSheet, isISpace, isSpaceNotion, isIRound, isRoundNotion, isColorNotion, IColor } from "./types"
 import ColorFactory from "color"
 import { Theme } from "./theme/theme"
-import { BaseThemedCssFunction, css } from "styled-components"
+import { css } from "styled-components"
 import { systemSheet } from "./utils"
 
 export const mappers: {

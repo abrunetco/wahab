@@ -1,7 +1,7 @@
 import styl, { defaults } from "../../styled"
 import { Theme } from "../../styled/theme/theme"
 import { StyleSystemSheet } from "../../styled/types"
-import { Box, BoxProps } from "../box/Box"
+import { BoxProps } from "../box/Box"
 import { Container } from "../container/Container"
 
 export interface NavProps {

@@ -1,7 +1,6 @@
 import { CSSProperties } from "react"
 import { mixinMap, mappedProps } from "./maps"
 import { Theme } from "./theme/theme"
-import { type } from "os"
 
 type FFamilies = "SuisseIntl"
 type FDecor = "upper" | "lower" | "start"

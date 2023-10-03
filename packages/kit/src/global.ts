@@ -5,6 +5,7 @@ import { Theme } from "./styled/theme/theme"
 import RegularSuisseIntl from "./fonts/SuisseIntl-Regular.ttf"
 import MediumSuisseIntl from "./fonts/SuisseIntl-Medium.ttf"
 import SemiBoldSuisseIntl from "./fonts/SuisseIntl-SemiBold.ttf"
+
 import { fontStyles } from "./styled/mixins"
 
 const GlobalStyles = createGlobalStyle`

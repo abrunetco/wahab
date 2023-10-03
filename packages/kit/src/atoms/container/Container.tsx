@@ -2,7 +2,7 @@
 import { CSSProperties } from "react"
 import styl, { defaults } from "../../styled"
 import { Theme } from "../../styled/theme/theme"
-import { Dictionary, IAlign, IJistify, ISpace, Space, StyleSystemSheet } from "../../styled/types"
+import { Dictionary, IAlign, IJistify, Space, StyleSystemSheet } from "../../styled/types"
 import { Box, BoxProps } from "../box/Box"
 
 export interface ContainerProps {
@@ -35,11 +35,7 @@ const justifyMap: Dictionary<CSSProperties["justifyContent"], IJistify> = {
 }
 
 export const containerStyles = (props: ContainerProps & BoxProps & { theme: Theme }): StyleSystemSheet => {
-  const gap: Space = props.gap
-    ? props.gap === true
-      ? props.padding?.all ?? "none"
-      : props.gap
-    : "none"
+  const gap: Space = props.gap ? props.gap === true ? "s" : props.gap : "none"
 
   return [
     { gap },
