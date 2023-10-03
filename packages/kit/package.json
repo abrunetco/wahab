@@ -6,8 +6,8 @@
   "scripts": {
     "gen:svg": "node ./scripts/svg-iconpack.js",
     "dev": "yarn run storybook",
-    "build": "rimraf dist/ && yarn build:lib",
-    "build:lib": "tsc --outDir dist/",
+    "build": "rimraf dist/ && yarn compile",
+    "compile": "tsc --outDir dist/",
     "lint": "yarn run lint:es && yarn run lint:styling",
     "lint:es": "eslint --fix src/**/*.tsx",
     "lint:styling": "stylelint --fix src/components/**/*.tsx",
