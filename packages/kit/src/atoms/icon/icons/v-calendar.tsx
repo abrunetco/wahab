@@ -1,9 +1,0 @@
-import React from "react"
-
-export const VCalendar: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
-  return (
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name={props.name} className={props.className}>
-      <path fillRule="evenodd" clipRule="evenodd" d="M8 3C8 2.44772 7.55228 2 7 2C6.44772 2 6 2.44772 6 3V4C4.34315 4 3 5.34315 3 7V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V7C21 5.34315 19.6569 4 18 4V3C18 2.44772 17.5523 2 17 2C16.4477 2 16 2.44772 16 3V4H8V3ZM6.5 7C6.22386 7 6 7.22386 6 7.5V9H18V7.5C18 7.22386 17.7761 7 17.5 7H6.5ZM9 12V14H7V12H9ZM13 12H11V14H13V12ZM17 12V14H15V12H17ZM17 18V16H15V18H17ZM11 16H13V18H11V16ZM9 16H7V18H9V16Z"/>
-    </svg>
-  )
-}
