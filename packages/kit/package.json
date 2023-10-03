@@ -1,8 +1,9 @@
 {
   "name": "@wahab/kit",
   "version": "0.0.0",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "license": "MIT",
+  "main": "lib/",
+  "types": "lib/",
   "scripts": {
     "gen:svg": "node ./scripts/svg-iconpack.js",
     "dev": "yarn run storybook",
