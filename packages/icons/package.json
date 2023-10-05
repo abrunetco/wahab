@@ -1,0 +1,19 @@
+{
+  "name": "@wahab/icons",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "lib/",
+  "types": "lib/",
+  "directories": {
+    "lib": "lib"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "gen": "node ./generate.cjs",
+    "build": "rimraf dist/ && yarn compile",
+    "compile": "tsc",
+    "tsck": "tsc --noEmit"
+  }
+}
