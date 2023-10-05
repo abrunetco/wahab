@@ -28,6 +28,6 @@
   "exclude": [
     "node_modules/**/*",
     "packages/**/*.test.tsx",
-    "packages/**/*Story.tsx"
+    "packages/**/*stories.tsx"
   ]
 }

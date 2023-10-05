@@ -11,7 +11,7 @@ export const labelStyles = (props: LabelProps & BoxProps & { theme: Theme }): St
 ]
 }
 
-export const InheritedFromBox = defaults(Box.styles, {
+const InheritedFromBox = defaults(Box.styles, {
   padding: { all: "s" },
   typo: "default"
 })

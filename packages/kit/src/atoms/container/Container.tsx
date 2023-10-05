@@ -47,7 +47,7 @@ export const containerStyles = (props: ContainerProps & BoxProps & { theme: Them
   ]
 }
 
-export const InheritedFromBox = defaults(Box.styles, {
+const InheritedFromBox = defaults(Box.styles, {
   width: "100%",
   flex: true,
 })

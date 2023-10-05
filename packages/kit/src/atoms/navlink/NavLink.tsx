@@ -2,14 +2,8 @@ import styl, { defaults } from "../../styled"
 import { Theme } from "../../styled/theme/theme"
 import { StyleSystemSheet } from "../../styled/types"
 import { BoxProps } from "../box/Box"
+import { NavProps } from "../nav/Nav"
 import { Span } from "../text/Text"
-
-export interface NavProps {
-  textDec: boolean
-  disable: boolean
-  block?: boolean
-  stretch?: boolean
-}
 
 export const navLinkStyles = (props: NavProps & BoxProps & { theme: Theme }): StyleSystemSheet => {
   return [

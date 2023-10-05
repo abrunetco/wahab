@@ -1,6 +1,6 @@
 import React from "react"
 import { Meta, StoryObj } from "@storybook/react"
-import { Field } from "./Field"
+import { Field } from "@wahab/kit"
 import { unflatArgs } from "../../utils/flatt-args"
 
 const meta: Meta<typeof Field> = {

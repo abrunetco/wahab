@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from "react"
-import { Paraph, Span } from "../../atoms/text/Text"
-import { BoxProps } from "../../atoms/box/Box"
+import { Paraph, Span } from "@kit"
+import { BoxProps } from "@kit"
 
 interface TextProps extends BoxProps {
   inline?: boolean

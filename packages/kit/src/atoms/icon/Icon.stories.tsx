@@ -1,7 +1,7 @@
 import React from "react";
-import _ from "lodash";
+import _ from "_";
 import { Meta, StoryObj } from "@storybook/react";
-import { Icon, IconName, IconStacker, iconNames } from "./index";
+import { Icon, IconName, IconStacker, iconNames } from "@kit";
 
 import { Box } from "../box/Box";
 import { Container } from "../container/Container";

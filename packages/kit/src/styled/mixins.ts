@@ -2,7 +2,7 @@ import { css } from "styled-components"
 import { mappers } from "./maps"
 import ColorFactory from "color"
 import { ColorProp, Typography } from "./types"
-import _ from "lodash"
+import _ from "_"
 
 export const center = css`
   display: flex;

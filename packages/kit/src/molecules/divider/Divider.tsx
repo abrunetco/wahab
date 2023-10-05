@@ -1,6 +1,6 @@
 import React from "react";
-import { Container } from "../../atoms/container/Container";
-import { Box } from "../../atoms/box/Box";
+import { Container } from "@kit";
+import { Box } from "@kit";
 
 interface DividerProps {}
 

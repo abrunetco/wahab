@@ -21,7 +21,7 @@ export const buttonStyles = (props: ButtonProps & BoxProps & { theme: Theme }): 
   ]
 }
 
-export const InheritedFromBox = defaults(Box.styles, {
+const InheritedFromBox = defaults(Box.styles, {
   padding: { all: "m" },
   rounded: { all: "s" },
   lvl: 1,

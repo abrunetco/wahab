@@ -1,4 +1,4 @@
-import _ from "lodash"
+import _ from "_"
 
 export const unflatArgs = (obj: object): object => {
   const p = _.reduce(obj, (acc, v, k) => {

@@ -3,7 +3,7 @@ import { mappedProps, mixinMap } from "./maps"
 import { FunctionSheet, MergeSheets, StyleSystemProps, StyleSystemSheet } from "./types"
 // @ts-ignore
 import styleToCss from "style-object-to-css-string"
-import _ from "lodash"
+import _ from "_"
 import { Theme } from "./theme/theme"
 import { ThemeProps, css } from "styled-components"
 

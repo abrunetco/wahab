@@ -15,7 +15,7 @@ export const ImageStyles = (props: ImageProps & BoxProps & { theme: Theme }): St
   ]
 }
 
-export const InheritedFromBox = defaults(Box.styles, {
+const InheritedFromBox = defaults(Box.styles, {
 
 })
 

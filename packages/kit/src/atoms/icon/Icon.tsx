@@ -22,7 +22,8 @@ export interface IconProps {
 function PlaceholderIcon(props: IconProps) {
   return <svg data-name={props.name} viewBox="0 0 24 24" />
 }
-
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 const icocomponents = _.mapValues(icons, (Icon) => {
   const s = styl(Icon ?? PlaceholderIcon, (props: IconProps) => [
     {

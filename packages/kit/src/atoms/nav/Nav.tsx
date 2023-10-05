@@ -5,6 +5,10 @@ import { BoxProps } from "../box/Box"
 import { Container } from "../container/Container"
 
 export interface NavProps {
+  textDec: boolean
+  disable: boolean
+  block?: boolean
+  stretch?: boolean
 }
 
 export const navStyles = (props: NavProps & BoxProps & { theme: Theme }): StyleSystemSheet => {

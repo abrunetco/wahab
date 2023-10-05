@@ -1,7 +1,7 @@
 import styl, { defaults } from "../../styled"
 import { Theme } from "../../styled/theme/theme"
 import { StyleSystemSheet } from "../../styled/types"
-import { Box, BoxProps } from "../../atoms/box/Box"
+import { Box, BoxProps } from "@kit"
 import { ComponentPropsWithoutRef } from "react"
 
 export interface SelectProps extends ComponentPropsWithoutRef<'select'> {

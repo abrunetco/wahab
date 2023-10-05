@@ -1,6 +1,6 @@
 import React from "react"
 import { Meta, StoryObj } from "@storybook/react"
-import { InputText } from "./Input"
+import { InputText } from "@kit"
 import { unflatArgs } from "../../utils/flatt-args"
 import { light } from "../../styled/theme/theme"
 

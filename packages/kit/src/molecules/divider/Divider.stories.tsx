@@ -1,6 +1,6 @@
 import React from "react"
 import { Meta, StoryObj } from "@storybook/react"
-import { Divider } from "./Divider"
+import { Divider } from "@kit"
 
 const meta: Meta<typeof Divider> = {
   title: "Molecules/Divider",

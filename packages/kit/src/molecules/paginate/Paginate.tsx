@@ -1,11 +1,11 @@
 import React, { forwardRef, useEffect, useState } from "react";
-import { Button } from "../../atoms/button/Button";
-import { Icon } from "../../atoms/icon";
-import { InputNumber } from "../../atoms/input/Input";
-import { Container } from "../../atoms/container/Container";
-import { Option, Select } from "../select/Select";
-import { Box } from "../../atoms/box/Box";
-import { Text } from "../text/Text";
+import { Button } from "@kit";
+import { Icon } from "@kit";
+import { InputNumber } from "@kit";
+import { Container } from "@kit";
+import { Option, Select } from "@kit";
+import { Box } from "@kit";
+import { Text } from "@kit";
 
 interface PaginationEvent {
   limit: number;

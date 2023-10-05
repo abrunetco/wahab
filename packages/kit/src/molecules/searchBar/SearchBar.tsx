@@ -1,10 +1,10 @@
 import React, { forwardRef } from "react"
-import { InputText } from "../../atoms/input/Input"
-import { Button } from "../../atoms/button/Button"
-import { Icon } from "../../atoms/icon"
-import { Box } from "../../atoms/box/Box"
-import { Container } from "../../atoms/container/Container"
-import { Paraph } from "../../atoms/text/Text"
+import { InputText } from "@kit"
+import { Button } from "@kit"
+import { Icon } from "@kit"
+import { Box } from "@kit"
+import { Container } from "@kit"
+import { Paraph } from "@kit"
 interface SearchBarProps {
   text?: string
 }

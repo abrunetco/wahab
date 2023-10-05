@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { Table, Tbody, Td, Th, Thead, Tr } from "./Table";
+import { Table, Tbody, Td, Th, Thead, Tr } from "@kit";
 import { light } from "../../styled/theme/theme";
 
 const meta: Meta<typeof Table> = {

@@ -1,9 +1,9 @@
 import React, { forwardRef, ComponentPropsWithoutRef } from "react";
-import { Container } from "../../atoms/container/Container";
-import { Icon, IconWrapper } from "../../atoms/icon";
-import { Box } from "../../atoms/box/Box";
-import { Label } from "../../atoms/labelInput/LabelInput";
-import { Button } from "../../atoms/button/Button";
+import { Container } from "@kit";
+import { Icon, IconWrapper } from "@kit";
+import { Box } from "@kit";
+import { Label } from "@kit";
+import { Button } from "@kit";
 
 interface RadioProps extends ComponentPropsWithoutRef<'input'> {
   label?: string;

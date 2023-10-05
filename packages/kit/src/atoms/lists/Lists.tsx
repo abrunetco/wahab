@@ -13,7 +13,7 @@ export const listStyles = (props: ListProps & BoxProps & { theme: Theme }): Styl
   ]
 }
 
-export const InheritedFromBox = defaults(Box.styles, {
+const InheritedFromBox = defaults(Box.styles, {
   padding: { all: "xs" }
 })
 

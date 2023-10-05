@@ -1,11 +1,11 @@
 import React, { ComponentPropsWithoutRef, forwardRef } from "react"
 import styl from "../../styled"
 // import { Icon } from "../../atoms/icon"
-import { Box } from "../../atoms/box/Box"
-import { Container } from "../../atoms/container/Container"
-import { Label } from "../../atoms/labelInput/LabelInput"
-import { InputBase } from "../../atoms/input/Input"
-import { Text } from "../text/Text"
+import { Box } from "@kit"
+import { Container } from "@kit"
+import { Label } from "@kit"
+import { InputBase } from "@kit"
+import { Text } from "@kit"
 
 interface CheckboxProps extends ComponentPropsWithoutRef<'input'> {
   label?: string

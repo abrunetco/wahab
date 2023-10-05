@@ -1,6 +1,6 @@
 import React from "react"
 import { Meta, StoryObj } from "@storybook/react"
-import { Label } from "./LabelInput"
+import { Label } from "@kit"
 import { unflatArgs } from "../../utils/flatt-args"
 import {light} from "../../styled/theme/theme"
 

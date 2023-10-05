@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Meta, StoryObj } from "@storybook/react"
-import { Paginate } from "./Paginate"
+import { Paginate } from "@kit"
 
 const meta: Meta<typeof Paginate> = {
   title: "Molecules/Paginate",

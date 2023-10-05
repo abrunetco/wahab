@@ -16,7 +16,7 @@ export const textareaStyles = (props: TextareaProps & BoxProps & { theme: Theme 
   ]
 }
 
-export const InheritedFromBox = defaults(Box.styles, {
+const InheritedFromBox = defaults(Box.styles, {
   border: { c: {v:"white", l:"darker"}, s: 2 },
   padding: { all: "xs" },
   rounded: { all: "xxs" },

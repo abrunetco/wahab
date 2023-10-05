@@ -1,9 +1,9 @@
 import React, { forwardRef } from "react"
-import { Nav } from "../../atoms/nav/Nav"
-import { NavLink } from "../../atoms/navlink/NavLink"
+import { Nav } from "@kit"
+import { NavLink } from "@kit"
 import styl, { defaults } from "../../styled"
-import { Box } from "../../atoms/box/Box"
-import { SearchBar } from "../searchBar/SearchBar"
+import { Box } from "@kit"
+import { SearchBar } from "@kit"
 
 
 interface NavbarProps {

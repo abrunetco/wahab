@@ -2,10 +2,13 @@
 // @ts-nocheck
 import React from "react"
 import styled, { IntrinsicElementsKeys } from "styled-components"
-import _ from "lodash"
+import _ from "_"
 import { FunctionSheet, MergeSheets, StyleSystemSheet } from "./types"
 import { getChangedProps, mergeFunctionSheets, renderStyles } from "./utils"
 import cleaned from "./cleaned"
+
+export * from "./theme/provider"
+export * from "./theme/theme"
 
 export default function styl<
   EL extends IntrinsicElementsKeys | React.ComponentType<any>,

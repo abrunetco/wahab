@@ -17,7 +17,7 @@ export const inputStyles = (props: InputProps & BoxProps & { theme: Theme }): St
   ]
 }
 
-export const InheritedFromBox = defaults(Box.styles, {
+const InheritedFromBox = defaults(Box.styles, {
   border: { c: {v:"white", l:"darker"}, s: 1 },
   padding: { all: "xs" },
   rounded: { all: "xxs" },

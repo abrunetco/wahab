@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from "react";
-import { Box, BoxProps } from "../../atoms/box/Box";
+import { Box, BoxProps } from "@kit";
 import styled from "styled-components";
 
 interface ButtonGroupProps extends BoxProps {

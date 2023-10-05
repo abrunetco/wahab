@@ -1,6 +1,6 @@
 import React from "react"
 import type { Meta, StoryObj } from "@storybook/react"
-import { Container } from "./Container"
+import { Container } from "@kit"
 import { unflatArgs } from "../../utils/flatt-args"
 import { Box } from "../box/Box"
 import { light } from "../../styled/theme/theme"

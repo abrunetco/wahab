@@ -3,8 +3,15 @@
   "include": [
     "./src/**/*"
   ],
+  "exclude": [
+    "./src/**/*stories.tsx"
+  ],
   "compilerOptions": {
     "outDir": "./lib",
     "rootDir": "./src",
+    "paths": {
+      "@kit": ["./src/index.ts"],
+      "_": ["./src/lodash.ts"]
+    }
   }
 }

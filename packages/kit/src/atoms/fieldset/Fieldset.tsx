@@ -13,7 +13,7 @@ export const fieldsetStyles = (props: FieldsetProps & BoxProps & { theme: Theme 
   ]
 }
 
-export const InheritedFromBox = defaults(Box.styles, {
+const InheritedFromBox = defaults(Box.styles, {
   padding: { all: "xs" },
   
 })
