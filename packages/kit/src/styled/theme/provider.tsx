@@ -8,6 +8,15 @@ import { Theme, light } from "./theme"
 import GlobalStyles from "../../global"
 
 export function ThemeProvider ({ children, theme }: { children: ReactNode, theme: Theme }) {
+  return (
+    <StyledThemeProvider theme={theme ?? light}>
+      <GlobalStyles/>
+      {children}
+    </StyledThemeProvider>
+  )
+}
+
+export function ThemeProviderWithBootstrap ({ children, theme }: { children: ReactNode, theme: Theme }) {
   if (theme.name === "bs") {
     return (
       <StyledThemeProvider theme={theme ?? light}>
@@ -18,10 +27,9 @@ export function ThemeProvider ({ children, theme }: { children: ReactNode, theme
   }
 
   return (
-    <StyledThemeProvider theme={theme ?? light}>
-      <GlobalStyles/>
+    <ThemeProvider theme={theme}>
       {children}
-    </StyledThemeProvider>
+    </ThemeProvider>
   )
 }
 
