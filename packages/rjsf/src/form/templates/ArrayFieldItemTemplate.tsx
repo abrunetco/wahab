@@ -44,10 +44,6 @@ export default function ArrayFieldItemTemplate<
           >
             {(hasMoveUp || hasMoveDown) && (
               <MoveUpButton
-                padding={{
-                  all: 's'
-                }}
-                block
                 disabled={disabled || readonly || !hasMoveUp}
                 onClick={onReorderClick(index, index - 1)}
                 uiSchema={uiSchema}
@@ -56,10 +52,6 @@ export default function ArrayFieldItemTemplate<
             )}
             {(hasMoveUp || hasMoveDown) && (
               <MoveDownButton
-                padding={{
-                  all: 's'
-                }}
-                block
                 disabled={disabled || readonly || !hasMoveDown}
                 onClick={onReorderClick(index, index + 1)}
                 uiSchema={uiSchema}
@@ -68,10 +60,6 @@ export default function ArrayFieldItemTemplate<
             )}
             {hasCopy && (
               <CopyButton
-                padding={{
-                  all: 's'
-                }}
-                block
                 disabled={disabled || readonly}
                 onClick={onCopyIndexClick(index)}
                 uiSchema={uiSchema}
@@ -80,10 +68,6 @@ export default function ArrayFieldItemTemplate<
             )}
             {hasRemove && (
               <RemoveButton
-                padding={{
-                  all: 's'
-                }}
-                block
                 disabled={disabled || readonly}
                 onClick={onDropIndexClick(index)}
                 uiSchema={uiSchema}

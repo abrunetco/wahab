@@ -21,7 +21,6 @@ export default function AddButton<T = any, S extends StrictRJSFSchema = RJSFSche
     >
       <Text padding="t:l" className={`col-xs-3 col-xs-offset-9 text-right ${className}`}>
         <IconButton
-          rounded="xs"
           iconType="active"
           icon="Plus"
           className="col-xs-12"

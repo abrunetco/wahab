@@ -80,5 +80,6 @@
     "react-bootstrap": "^2.7.4",
     "style-object-to-css-string": "^1.0.1",
     "styled-components": "^5.3.10"
-  }
+  },
+  "gitHead": "8a99d6b26fbb88a0abe580aac6baccc9c8eda1fb"
 }

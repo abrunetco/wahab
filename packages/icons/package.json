@@ -15,5 +15,6 @@
     "build": "rimraf dist/ && yarn compile",
     "compile": "tsc",
     "tsck": "tsc --noEmit"
-  }
+  },
+  "gitHead": "8a99d6b26fbb88a0abe580aac6baccc9c8eda1fb"
 }

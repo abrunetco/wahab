@@ -3,14 +3,13 @@ import {
   ariaDescribedByIds,
   descriptionId,
   getTemplate,
-  labelValue,
   schemaRequiresTrueValue,
   FormContextType,
+  labelValue,
   RJSFSchema,
   StrictRJSFSchema,
   WidgetProps,
 } from "@rjsf/utils"
-import { Label } from "@wahab/kit"
 import { Text } from "@wahab/kit"
 import { Checkbox } from "@wahab/kit"
 import { Box } from "@wahab/kit"
@@ -84,7 +83,7 @@ function CheckboxWidget<T = any, S extends StrictRJSFSchema = RJSFSchema, F exte
         onBlur={handleBlur}
         onFocus={handleFocus}
         aria-describedby={ariaDescribedByIds<T>(id)}
-        label={labelValue(<Text inline>{label}</Text>, hideLabel)}
+        label={labelValue(<Text inline>{label}</Text>, hideLabel) || undefined}
       />
     </Box>
   )

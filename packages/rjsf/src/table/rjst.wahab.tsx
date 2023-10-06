@@ -91,8 +91,7 @@ const TableGrid = ({ schema, rows, renderControls, label }: TableGridProps) => {
                   </Container>
                 </Th>
                 {_.keys(schema.properties).map((key, index) => {
-                  const conf = schema.properties?.[key],
-                    cellId = `${row._id}_${key}`,
+                  const cellId = `${row._id}_${key}`,
                     value = row[key] ?? '-'
                   return index === 0 ? (
                     <Th key={cellId}>{value}</Th>

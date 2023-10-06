@@ -1,4 +1,4 @@
-import React, { ComponentPropsWithoutRef, forwardRef } from "react"
+import React, { ComponentPropsWithoutRef, forwardRef, ReactElement } from "react"
 import styl from "../../styled"
 // import { Icon } from "../../atoms/icon"
 import { Box } from "@wahab/kit"
@@ -8,7 +8,7 @@ import { InputBase } from "@wahab/kit"
 import { Text } from "@wahab/kit"
 
 interface CheckboxProps extends ComponentPropsWithoutRef<'input'> {
-  label?: string
+  label?: string | ReactElement
 }
 
 export const Checkbox = forwardRef((props: CheckboxProps, ref) => {
