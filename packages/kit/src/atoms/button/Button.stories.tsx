@@ -6,7 +6,7 @@ import { light } from "../../styled/theme/theme"
 
 const meta: Meta<typeof Button> = {
   title: "Atoms/Button",
-  tags: ["autodocs"],
+  // tags: ["autodocs"],
   render (args) {
     const p = unflatArgs(args)
 
