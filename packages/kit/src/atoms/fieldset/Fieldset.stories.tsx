@@ -1,7 +1,7 @@
 import React from "react"
 import { Meta, StoryObj } from "@storybook/react"
 import { unflatArgs } from "../../utils/flatt-args"
-import { Fieldset, Legend } from "@kit"
+import { Fieldset, Legend } from "@wahab/kit"
 import { Label } from "../labelInput/LabelInput"
 import { InputText } from "../input/Input"
 

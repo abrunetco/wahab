@@ -1,8 +1,9 @@
-import _ from "_"
+import set from "lodash.set"
+import reduce from "lodash.reduce"
 
 export const unflatArgs = (obj: object): object => {
-  const p = _.reduce(obj, (acc, v, k) => {
-    _.set(acc, k, v)
+  const p = reduce(obj, (acc, v, k) => {
+    set(acc, k, v)
 
     return acc
   }, {})

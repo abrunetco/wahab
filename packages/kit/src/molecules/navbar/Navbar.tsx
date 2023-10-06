@@ -1,9 +1,9 @@
 import React, { forwardRef } from "react"
-import { Nav } from "@kit"
-import { NavLink } from "@kit"
+import { Nav } from "@wahab/kit"
+import { NavLink } from "@wahab/kit"
 import styl, { defaults } from "../../styled"
-import { Box } from "@kit"
-import { SearchBar } from "@kit"
+import { Box } from "@wahab/kit"
+import { SearchBar } from "@wahab/kit"
 
 
 interface NavbarProps {

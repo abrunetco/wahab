@@ -43,7 +43,7 @@ export const containerStyles = (props: ContainerProps & BoxProps & { theme: Them
     props.alignC && {alignContent: alignCMap[props.align]},
     props.align && {alignItems: alignMap[props.align]},
     props.justify && {justifyContent: justifyMap[props.justify]},
-    props.wrap === true && { flexWrap: "wrap" }
+    props.wrap && { flexWrap: "wrap" }
   ]
 }
 

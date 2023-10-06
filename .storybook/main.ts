@@ -1,8 +1,9 @@
 import type { StorybookConfig } from "@storybook/react-vite";
+
 const config: StorybookConfig = {
   stories: [
-    "../../../packages/**/*.mdx",
-    "../../../packages/**/*.stories.@(ts|tsx)",
+    // "../packages/**/*.mdx",
+    "../packages/kit/**/*.stories.@(ts|tsx)",
   ],
   addons: [
     "@storybook/addon-links",
@@ -14,10 +15,13 @@ const config: StorybookConfig = {
     name: "@storybook/react-vite",
     options: {
       builder: {
-        viteConfigPath: "./.storybook/vite.config.ts"
-      }
+        viteConfigPath: "./.storybook/vite.config.ts",
+      },
     },
   },
+  // features: {
+  //   storyStoreV7: true
+  // },
   docs: {
     autodocs: "tag",
   }

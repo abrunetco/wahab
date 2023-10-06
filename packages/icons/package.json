@@ -2,8 +2,8 @@
   "name": "@wahab/icons",
   "version": "0.1.0",
   "license": "MIT",
-  "main": "lib/",
-  "types": "lib/",
+  "main": "src/",
+  "types": "src/",
   "directories": {
     "lib": "lib"
   },

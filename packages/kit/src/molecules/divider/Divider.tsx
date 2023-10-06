@@ -1,6 +1,6 @@
 import React from "react";
-import { Container } from "@kit";
-import { Box } from "@kit";
+import { Container } from "@wahab/kit";
+import { Box } from "@wahab/kit";
 
 interface DividerProps {}
 

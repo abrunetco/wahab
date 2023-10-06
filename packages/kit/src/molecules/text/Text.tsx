@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from "react"
-import { Paraph, Span } from "@kit"
-import { BoxProps } from "@kit"
+import { Paraph, Span } from "@wahab/kit"
+import { BoxProps } from "@wahab/kit"
 
 interface TextProps extends BoxProps {
   inline?: boolean

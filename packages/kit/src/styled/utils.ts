@@ -3,7 +3,8 @@ import { mappedProps, mixinMap } from "./maps"
 import { FunctionSheet, MergeSheets, StyleSystemProps, StyleSystemSheet } from "./types"
 // @ts-ignore
 import styleToCss from "style-object-to-css-string"
-import _ from "_"
+import castArray from "lodash.castarray"
+import isArray from "lodash.isarray"
 import { Theme } from "./theme/theme"
 import { ThemeProps, css } from "styled-components"
 
@@ -70,10 +71,10 @@ export function mergeSheets (sheets: StyleSystemSheet[]) {
 export function callSheet (sheet: FunctionSheet<any>, props: any): StyleSystemProps {
   const called = typeof sheet === "function" ? sheet(props) : sheet
 
-  return (_.isArray(called) ? mergeSheets(called) : called) || {}
+  return (isArray(called) ? mergeSheets(called) : called) || {}
 }
 
 export function mergeFunctionSheets<ST extends FunctionSheet | FunctionSheet[]> (sheets: ST) {
   return (props: MergeSheets<ST>) =>
-    mergeSheets(_.castArray(sheets).map((st) => callSheet(st, props)))
+    mergeSheets(castArray(sheets).map((st) => callSheet(st, props)))
 }

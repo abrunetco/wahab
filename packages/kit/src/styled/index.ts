@@ -2,7 +2,6 @@
 // @ts-nocheck
 import React from "react"
 import styled, { IntrinsicElementsKeys } from "styled-components"
-import _ from "_"
 import { FunctionSheet, MergeSheets, StyleSystemSheet } from "./types"
 import { getChangedProps, mergeFunctionSheets, renderStyles } from "./utils"
 import cleaned from "./cleaned"

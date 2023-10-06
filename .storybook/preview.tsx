@@ -1,7 +1,9 @@
+import React from "react";
 import type { Preview } from "@storybook/react";
 import { withThemeFromJSXProvider } from '@storybook/addon-styling';
-import { light, dark } from '@xla/wahab/src/styled/theme/theme';
-import { ThemeProvider } from '@xla/wahab/src/styled/theme/provider';
+import { light, dark } from '../packages/kit/src/styled/theme/theme';
+import * as icons from '../packages/icons/src';
+import { ThemeProviderWithBootstrap } from '../packages/kit/src/styled/theme/provider';
 
 const preview: Preview = {
   parameters: {
@@ -17,9 +19,9 @@ const preview: Preview = {
 
 export const decorators = [
   withThemeFromJSXProvider({
-  themes: { light, dark, bs4: {...light, name: 'bs'} },
-  defaultTheme: 'bs4',
-  Provider: ThemeProvider
+  themes: { light: { ...light, icons }, dark: { ...dark, icons }, bs4: {...light, name: 'bs'} },
+  defaultTheme: 'light',
+  Provider: ThemeProviderWithBootstrap
 })];
 
 export default preview;

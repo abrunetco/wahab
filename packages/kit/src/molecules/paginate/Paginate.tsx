@@ -1,11 +1,11 @@
 import React, { forwardRef, useEffect, useState } from "react";
-import { Button } from "@kit";
-import { Icon } from "@kit";
-import { InputNumber } from "@kit";
-import { Container } from "@kit";
-import { Option, Select } from "@kit";
-import { Box } from "@kit";
-import { Text } from "@kit";
+import { Button } from "@wahab/kit";
+import { Icon } from "@wahab/kit";
+import { InputNumber } from "@wahab/kit";
+import { Container } from "@wahab/kit";
+import { Option, Select } from "@wahab/kit";
+import { Box } from "@wahab/kit";
+import { Text } from "@wahab/kit";
 
 interface PaginationEvent {
   limit: number;

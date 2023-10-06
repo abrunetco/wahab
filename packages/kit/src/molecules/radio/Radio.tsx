@@ -1,9 +1,9 @@
 import React, { forwardRef, ComponentPropsWithoutRef } from "react";
-import { Container } from "@kit";
-import { Icon, IconWrapper } from "@kit";
-import { Box } from "@kit";
-import { Label } from "@kit";
-import { Button } from "@kit";
+import { Container } from "@wahab/kit";
+import { Icon, IconWrapper } from "@wahab/kit";
+import { Box } from "@wahab/kit";
+import { Label } from "@wahab/kit";
+import { Button } from "@wahab/kit";
 
 interface RadioProps extends ComponentPropsWithoutRef<'input'> {
   label?: string;

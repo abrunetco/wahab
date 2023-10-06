@@ -1,6 +1,6 @@
 import React from "react"
 import { Meta, StoryObj } from "@storybook/react"
-import { Checkbox } from "@kit"
+import { Checkbox } from "@wahab/kit"
 
 const meta: Meta<typeof Checkbox> = {
   title: "Molecules/Checkbox",

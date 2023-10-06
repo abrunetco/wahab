@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from "react";
-import { Box, BoxProps } from "@kit";
+import { Box, BoxProps } from "@wahab/kit";
 import styled from "styled-components";
 
 interface ButtonGroupProps extends BoxProps {

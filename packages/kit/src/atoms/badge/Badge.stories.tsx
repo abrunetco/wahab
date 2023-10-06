@@ -1,8 +1,9 @@
 import React from "react"
 import { Meta, StoryObj } from "@storybook/react"
 import { unflatArgs } from "../../utils/flatt-args"
-import { Badge } from "@kit"
+import { Badge } from "@wahab/kit"
 import { light } from "../../styled/theme/theme"
+
 
 const meta: Meta<typeof Badge> = {
   title: "Atoms/Badge",

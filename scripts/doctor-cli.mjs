@@ -2,7 +2,7 @@
 import { Command } from 'commander'
 import path from 'node:path'
 import fs from 'node:fs'
-import { execSync } from 'node:child_process'
+import { execSync } from 'child_process'
 import chalk from 'chalk'
 import inquirer from 'inquirer'
 

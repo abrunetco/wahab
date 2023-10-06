@@ -1,10 +1,10 @@
 import React, { forwardRef } from "react"
-import { InputText } from "@kit"
-import { Button } from "@kit"
-import { Icon } from "@kit"
-import { Box } from "@kit"
-import { Container } from "@kit"
-import { Paraph } from "@kit"
+import { InputText } from "@wahab/kit"
+import { Button } from "@wahab/kit"
+import { Icon } from "@wahab/kit"
+import { Box } from "@wahab/kit"
+import { Container } from "@wahab/kit"
+import { Paraph } from "@wahab/kit"
 interface SearchBarProps {
   text?: string
 }

@@ -1,6 +1,6 @@
 import React from "react"
 import { Meta, StoryObj } from "@storybook/react"
-import { SearchBar } from "@kit"
+import { SearchBar } from "@wahab/kit"
 import { unflatArgs } from "../../utils/flatt-args"
 
 const meta: Meta<typeof SearchBar> = {

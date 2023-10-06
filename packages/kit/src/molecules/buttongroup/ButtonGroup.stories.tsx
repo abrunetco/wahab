@@ -1,7 +1,7 @@
 import React from "react"
 import { Meta, StoryObj } from "@storybook/react"
-import { ButtonGroup } from "@kit"
-import { Button } from "@kit"
+import { ButtonGroup } from "@wahab/kit"
+import { Button } from "@wahab/kit"
 
 
 const btnProps = {

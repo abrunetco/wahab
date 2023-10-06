@@ -1,19 +1,28 @@
-import React from "react";
-import _ from "_";
+import React, { useContext } from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { Icon, IconName, IconStacker, iconNames } from "@kit";
+import { Icon, IconName, IconStacker } from "@wahab/kit";
 
 import { Box } from "../box/Box";
 import { Container } from "../container/Container";
+import { ThemeContext } from "styled-components";
+
+const IconNames = (props) => {
+  const themeContext = useContext(ThemeContext)
+  console.log('-------', Object.keys(themeContext.icons))
+  return (
+    props.children.call(this, Object.keys(themeContext.icons))
+  )
+}
 
 const meta: Meta<typeof Icon> = {
   title: 'Atoms/Icons',
   tags: ['autodocs'],
   render(args) {
-    // const iconRows = _.chunk(iconNames, 6)
     return (
-          <Container justify="between" gap="xxl" wrap={true}>
-            {iconNames.map((icon) => (
+      <IconNames>
+        {(iconNames) => (
+          <Container justify="between" gap="xxl" wrap>
+            {['-unknown-', ...iconNames].map((icon) => (
               <Container width={5} flow="col" key={icon} align="center">
                 <Box center width={5} height={5}>
                   <IconStacker>
@@ -24,6 +33,8 @@ const meta: Meta<typeof Icon> = {
               </Container>
             ))}
           </Container>
+        )}
+      </IconNames>
     )
   },
   argTypes: {

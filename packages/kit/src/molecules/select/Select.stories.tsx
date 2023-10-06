@@ -1,7 +1,7 @@
 import React from "react"
 import { Meta, StoryObj } from "@storybook/react"
 import { unflatArgs } from "../../utils/flatt-args"
-import { Option, Select } from "@kit"
+import { Option, Select } from "@wahab/kit"
 
 const meta: Meta<typeof Select> = {
   title: "Molecules/Select",

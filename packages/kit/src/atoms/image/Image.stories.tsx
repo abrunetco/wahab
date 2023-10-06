@@ -1,7 +1,7 @@
 import React from "react"
 import { Meta, StoryObj } from "@storybook/react"
 import { unflatArgs } from "../../utils/flatt-args"
-import { Image } from "@kit"
+import { Image } from "@wahab/kit"
 import { light } from "../../styled/theme/theme"
 
 const meta: Meta<typeof Image> = {

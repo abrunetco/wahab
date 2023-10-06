@@ -1,3 +1,4 @@
+import { ReactNode } from "react"
 import { BoldStyle, Color, FontStyle } from "../types"
 
 const GOLDEN_RATIO = 1.618033
@@ -12,6 +13,9 @@ export interface Theme {
   size: number
   bgName: Color
   defaultBtnBgName: Color
+  icons: {
+    [s: string]: ReactNode
+  }
   palette: {
     body: string
     black: string
@@ -92,6 +96,7 @@ export const light: Theme = {
   bgName: "body",
   defaultBtnBgName: "secondary",
   shadowColor: "black",
+  icons: {},
   palette: {
     body: "#b0f3e1",
     black: "#17363B",

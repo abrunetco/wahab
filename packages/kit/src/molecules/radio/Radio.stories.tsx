@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { Radio } from "@kit";
+import { Radio } from "@wahab/kit";
 
 const meta: Meta<typeof Radio> = {
   title: 'Molecules/Radio',

@@ -1,4 +1,5 @@
-import _ from "_"
+import castArray from "lodash.castarray"
+import map from "lodash.map"
 import * as mixins from "./mixins"
 import { SpecialArgTypes, Mapper, isIColor, Typography, ExtendedStyleSystemSheet, isISpace, isSpaceNotion, isIRound, isRoundNotion, isColorNotion, IColor, Size, Space, Round } from "./types"
 import ColorFactory from "color"
@@ -10,7 +11,7 @@ export const mappers: {
   [T in keyof SpecialArgTypes]: Mapper<T>
 } = {
   size: (s, theme) => (typeof s === "number" ? `${theme.size * s}px` : s),
-  sizes: (ss, theme) => _.castArray(ss).map((s: Size) => mappers.size(s, theme)).join(" "),
+  sizes: (ss, theme) => castArray(ss).map((s: Size) => mappers.size(s, theme)).join(" "),
   color: (c, theme) => {
 
     if (!isIColor(c)) {
@@ -62,8 +63,8 @@ export const mappers: {
     if (s.e) spaces = [spaces[0], s.e, spaces[2], spaces[3]]
     if (s.t) spaces = [s.t, spaces[1], spaces[2], spaces[3]]
     if (s.b) spaces = [spaces[0], spaces[1], s.b, spaces[3]]
-
-    return _.map(spaces, (s: Space) => `${theme.size * theme.spacing[s]}px`).join(" ")
+    
+    return map(spaces, (s: Space) => `${theme.size * theme.spacing[s]}px`).join(" ")
   },
   round: (r, theme) => {
     let rounds: Array<keyof Theme["round"]> = ["none", "none", "none", "none"]
@@ -87,7 +88,7 @@ export const mappers: {
     if (r.e) rounds = [rounds[0], r.e, r.e, rounds[3]]
     if (r.b) rounds = [rounds[0], rounds[1], r.b, r.b]
 
-    return _.map(rounds, (r: Round) => `${theme.size * theme.round[r]}px`).join(" ")
+    return map(rounds, (r: Round) => `${theme.size * theme.round[r]}px`).join(" ")
   },
   shadow: (sh, theme) => {
     const size = `${theme.shadowSize[sh]}px`

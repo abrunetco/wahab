@@ -9,9 +9,5 @@
   "compilerOptions": {
     "outDir": "./lib",
     "rootDir": "./src",
-    "paths": {
-      "@kit": ["./src/index.ts"],
-      "_": ["./src/lodash.ts"]
-    }
   }
 }

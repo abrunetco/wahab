@@ -1,7 +1,7 @@
 import React from "react"
 import { Meta, StoryObj } from "@storybook/react"
 import { unflatArgs } from "../../utils/flatt-args"
-import { Navbar } from "@kit"
+import { Navbar } from "@wahab/kit"
 
 const meta: Meta<typeof Navbar> = {
   title: "Molecules/Navbar",
