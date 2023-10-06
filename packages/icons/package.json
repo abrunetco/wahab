@@ -16,5 +16,5 @@
     "compile": "tsc",
     "tsck": "tsc --noEmit"
   },
-  "gitHead": "11425c301cb227578f9bd17a642fa71a125c1bcb"
+  "gitHead": "0052503b8ea3af4bf767600f59db00d8b4d8c2c8"
 }

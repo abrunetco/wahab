@@ -10,5 +10,9 @@
       "conventionalCommits": true,
       "createRelease": "github"
     }
-  }
+  },
+  "packages": [
+    "packages/*"
+  ],
+  "npmClient": "yarn"
 }
