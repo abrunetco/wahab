@@ -14,7 +14,8 @@
     "gen": "node ./generate.cjs",
     "build": "rimraf dist/ && yarn compile",
     "compile": "tsc",
-    "tsck": "tsc --noEmit"
+    "tsck": "tsc --noEmit",
+    "pack": "npm pack"
   },
   "gitHead": "0052503b8ea3af4bf767600f59db00d8b4d8c2c8"
 }
