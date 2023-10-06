@@ -1,8 +1,8 @@
 import { FormContextType, TitleFieldProps, RJSFSchema, StrictRJSFSchema } from "@rjsf/utils"
 import React from "react";
-import { Text } from "@wahab/kit/molecules/text/Text";
-// import { Box } from "@wahab/kit/atoms/box/Box";
-import { Icon } from "@wahab/kit/atoms/icon";
+import { Text } from "@wahab/kit";
+// import { Box } from "@wahab/kit";
+import { Icon } from "@wahab/kit";
 
 // const REQUIRED_FIELD_SYMBOL = "*"
 

@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FocusEvent, useCallback } from "react"
 import { ariaDescribedByIds, FormContextType, RJSFSchema, StrictRJSFSchema, WidgetProps } from "@rjsf/utils"
-import { Textarea } from "@wahab/kit/atoms/textarea/textarea"
+import { Textarea } from "@wahab/kit"
 
 /** The `TextareaWidget` is a widget for rendering input fields as textarea.
  *

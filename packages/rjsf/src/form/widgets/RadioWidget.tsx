@@ -9,10 +9,10 @@ import {
   StrictRJSFSchema,
   WidgetProps,
 } from "@rjsf/utils"
-import { Text } from "@wahab/kit/molecules/text/Text"
-import { Box } from "@wahab/kit/atoms/box/Box"
-import { Label } from "@wahab/kit/atoms/labelInput/LabelInput"
-import { Radio } from "@wahab/kit/molecules/radio/Radio"
+import { Text } from "@wahab/kit"
+import { Box } from "@wahab/kit"
+import { Label } from "@wahab/kit"
+import { Radio } from "@wahab/kit"
 
 /** The `RadioWidget` is a widget for rendering a radio group.
  *  It is typically used with a string property constrained with enum options.

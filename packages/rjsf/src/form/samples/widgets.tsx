@@ -1,6 +1,6 @@
 import React from "react";
-import { InputBase } from "@wahab/kit/atoms/input/Input";
-import { Option, Select } from "@wahab/kit/molecules/select/Select";
+import { InputBase } from "@wahab/kit";
+import { Option, Select } from "@wahab/kit";
 
 export default {
   schema: {

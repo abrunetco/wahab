@@ -1,10 +1,10 @@
 import React from "react"
 import { Meta, StoryObj } from "@storybook/react"
-import { Field } from "@wahab/kit"
-import { unflatArgs } from "../../utils/flatt-args"
+import { Field } from "./Field"
+import { unflatArgs } from "../utils/flatt-args"
 
 const meta: Meta<typeof Field> = {
-  title: "Molecules/Field",
+  title: "RJSF/Field",
   tags: ["autodocs"],
   render (args) {
     const p = unflatArgs(args)

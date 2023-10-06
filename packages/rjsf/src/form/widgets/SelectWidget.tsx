@@ -8,7 +8,7 @@ import {
   StrictRJSFSchema,
   WidgetProps,
 } from "@rjsf/utils"
-import { Option, Select } from "@wahab/kit/molecules/select/Select"
+import { Option, Select } from "@wahab/kit"
 
 function getValue(event: SyntheticEvent<HTMLSelectElement>, multiple: boolean) {
   if (multiple) {

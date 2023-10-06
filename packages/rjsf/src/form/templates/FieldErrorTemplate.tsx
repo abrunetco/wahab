@@ -1,7 +1,7 @@
 import React from "react"
 import { errorId, FieldErrorProps, FormContextType, RJSFSchema, StrictRJSFSchema } from "@rjsf/utils"
-import { Box } from "@wahab/kit/atoms/box/Box"
-import { List, ListItem } from "@wahab/kit/atoms/lists/Lists"
+import { Box } from "@wahab/kit"
+import { List, ListItem } from "@wahab/kit"
 
 /** The `FieldErrorTemplate` component renders the errors local to the particular field
  *

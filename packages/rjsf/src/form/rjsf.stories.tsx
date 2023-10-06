@@ -16,7 +16,7 @@ interface FormExtraProps {
 const extraPropsKeys = ['sample', 'mode', 'focusName']
 
 const meta: Meta<ComponentProps<typeof Form> & FormExtraProps> = {
-  title: "Components/wahab-jsf",
+  title: "RJSF/form",
   render (args) {
     const props: Partial<ComponentProps<typeof Form>> = _.omit(args, extraPropsKeys)
     const extras: FormExtraProps = _.pick(args, extraPropsKeys)

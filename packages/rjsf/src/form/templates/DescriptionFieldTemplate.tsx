@@ -1,7 +1,7 @@
 import { DescriptionFieldProps, FormContextType, RJSFSchema, StrictRJSFSchema } from "@rjsf/utils"
 import React from "react"
-import { Box } from "@wahab/kit/atoms/box/Box"
-import { Text } from "@wahab/kit/molecules/text/Text";
+import { Box } from "@wahab/kit"
+import { Text } from "@wahab/kit";
 
 /** The `DescriptionField` is the template to use to render the description of a field
  *

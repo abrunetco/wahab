@@ -8,8 +8,8 @@ import {
   FormContextType,
   ObjectFieldTemplateProps,
 } from "@rjsf/utils"
-import { Box } from "@wahab/kit/atoms/box/Box"
-import { Container } from "@wahab/kit/atoms/container/Container"
+import { Box } from "@wahab/kit"
+import { Container } from "@wahab/kit"
 
 function ObjectFieldTemplate<T = any, S extends StrictRJSFSchema = RJSFSchema, F extends FormContextType = any> (
   props: ObjectFieldTemplateProps<T, S, F>

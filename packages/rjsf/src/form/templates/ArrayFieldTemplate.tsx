@@ -8,8 +8,7 @@ import {
   RJSFSchema,
   StrictRJSFSchema,
 } from "@rjsf/utils"
-import { Box } from '@wahab/kit/atoms/box/Box'
-import { Fieldset } from '@wahab/kit/atoms/fieldset/Fieldset'
+import { Box, Fieldset } from "@wahab/kit"
 
 /** The `ArrayFieldTemplate` component is the template used to render all items in an array.
  *

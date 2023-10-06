@@ -11,10 +11,10 @@ import {
   RJSFSchema,
   StrictRJSFSchema,
 } from "@rjsf/utils"
-import { Box } from "@wahab/kit/atoms/box/Box"
-import { Text } from "@wahab/kit/molecules/text/Text"
-import { Checkbox } from "@wahab/kit/molecules/checkbox/Checkbox"
-import { Label } from "@wahab/kit/atoms/labelInput/LabelInput"
+import { Box } from "@wahab/kit"
+import { Text } from "@wahab/kit"
+import { Checkbox } from "@wahab/kit"
+import { Label } from "@wahab/kit"
 
 /** The `CheckboxesWidget` is a widget for rendering checkbox groups.
  *  It is typically used to represent an array of enums.

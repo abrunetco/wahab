@@ -14,7 +14,7 @@ import {
   StrictRJSFSchema,
   TranslatableString,
 } from '@rjsf/utils';
-import { Box } from '@wahab/kit/atoms/box/Box';
+import { Box } from "@wahab/kit";
 
 /** Type used for the state of the `AnyOfField` component */
 type AnyOfFieldState<S extends StrictRJSFSchema = RJSFSchema> = {

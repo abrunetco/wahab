@@ -23,8 +23,7 @@ import has from 'lodash/has';
 import isObject from 'lodash/isObject';
 import set from 'lodash/set';
 import unset from 'lodash/unset';
-import { Box } from '@wahab/kit/atoms/box/Box';
-import { Text } from '@wahab/kit/molecules/text/Text';
+import { Box, Text } from '@wahab/kit';
 
 /** Type used for the state of the `ObjectField` component */
 type ObjectFieldState = {

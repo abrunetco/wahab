@@ -1,7 +1,7 @@
 import React from "react"
 import { FormContextType, RJSFSchema, StrictRJSFSchema, WidgetProps } from "@rjsf/utils"
-import { Box } from "@wahab/kit/atoms/box/Box"
-import { Text } from "@wahab/kit/molecules/text/Text"
+import { Box } from "@wahab/kit"
+import { Text } from "@wahab/kit"
 
 /** The `RangeWidget` component uses the `BaseInputTemplate` changing the type to `range` and wrapping the result
  * in a div, with the value along side it.

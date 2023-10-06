@@ -1,7 +1,7 @@
 import React from "react"
 import { getSubmitButtonOptions, FormContextType, RJSFSchema, StrictRJSFSchema, SubmitButtonProps } from "@rjsf/utils"
-import { Box } from "../@wahab/kit/atoms/box/Box"
-import { Button } from "../@wahab/kit/atoms/button/Button"
+import { Box } from "@wahab/kit"
+import { Button } from "@wahab/kit"
 
 /** The `SubmitButton` renders a button that represent the `Submit` action on a form
  */

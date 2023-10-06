@@ -1,5 +1,6 @@
-import { ReactNode } from "react"
+import { FC, SVGProps } from "react"
 import { BoldStyle, Color, FontStyle } from "../types"
+import * as defaulticons from '../defaulticons'
 
 const GOLDEN_RATIO = 1.618033
 const GOLDEN_FRICTION = 10
@@ -14,7 +15,7 @@ export interface Theme {
   bgName: Color
   defaultBtnBgName: Color
   icons: {
-    [s: string]: ReactNode
+    [s: string]: FC<SVGProps<SVGSVGElement>>
   }
   palette: {
     body: string
@@ -96,7 +97,7 @@ export const light: Theme = {
   bgName: "body",
   defaultBtnBgName: "secondary",
   shadowColor: "black",
-  icons: {},
+  icons: defaulticons,
   palette: {
     body: "#b0f3e1",
     black: "#17363B",

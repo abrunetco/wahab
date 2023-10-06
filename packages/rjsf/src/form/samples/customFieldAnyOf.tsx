@@ -1,8 +1,8 @@
 import React from "react";
-import { Label } from "@wahab/kit/atoms/labelInput/LabelInput";
-import { Box } from "@wahab/kit/atoms/box/Box";
-import { Container } from "@wahab/kit/atoms/container/Container";
-import { InputBase } from "@wahab/kit/atoms/input/Input";
+import { Label } from "@wahab/kit";
+import { Box } from "@wahab/kit";
+import { Container } from "@wahab/kit";
+import { InputBase } from "@wahab/kit";
 const UiField: React.FC<{
   schema?: any;
   idSchema: { $id: string };

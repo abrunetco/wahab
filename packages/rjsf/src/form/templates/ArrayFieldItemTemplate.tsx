@@ -1,7 +1,7 @@
 import React from "react"
 import { ArrayFieldTemplateItemType, FormContextType, RJSFSchema, StrictRJSFSchema } from "@rjsf/utils"
-import { Box } from "@wahab/kit/atoms/box/Box"
-import { Container } from "@wahab/kit/atoms/container/Container"
+import { Box } from "@wahab/kit"
+import { Container } from "@wahab/kit"
 
 /** The `ArrayFieldItemTemplate` component is the template used to render an items of an array.
  *

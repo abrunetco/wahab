@@ -11,8 +11,8 @@ import {
   TranslatableString,
   WidgetProps,
 } from "@rjsf/utils"
-import { List, ListItem } from "@wahab/kit/atoms/lists/Lists"
-import { Button } from "@wahab/kit/atoms/button/Button"
+import { List, ListItem } from "@wahab/kit"
+import { Button } from "@wahab/kit"
 
 function rangeOptions (start: number, stop: number) {
   const options = []

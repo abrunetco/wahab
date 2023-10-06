@@ -1,7 +1,7 @@
 import React from "react"
 import { helpId, FieldHelpProps, FormContextType, RJSFSchema, StrictRJSFSchema } from "@rjsf/utils"
-import { Text } from "@wahab/kit/molecules/text/Text"
-import { Box } from "@wahab/kit/atoms/box/Box"
+import { Text } from "@wahab/kit"
+import { Box } from "@wahab/kit"
 
 /** The `FieldHelpTemplate` component renders any help desired for a field
  *

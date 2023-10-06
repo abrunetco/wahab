@@ -10,10 +10,10 @@ import {
   StrictRJSFSchema,
   WidgetProps,
 } from "@rjsf/utils"
-import { Label } from "@wahab/kit/atoms/labelInput/LabelInput"
-import { Text } from "@wahab/kit/molecules/text/Text"
-import { Checkbox } from "@wahab/kit/molecules/checkbox/Checkbox"
-import { Box } from "@wahab/kit/atoms/box/Box"
+import { Label } from "@wahab/kit"
+import { Text } from "@wahab/kit"
+import { Checkbox } from "@wahab/kit"
+import { Box } from "@wahab/kit"
 
 /** The `CheckBoxWidget` is a widget for rendering boolean properties.
  *  It is typically used to represent a boolean.

@@ -1,8 +1,8 @@
 import React from "react"
 import { FormContextType, RJSFSchema, StrictRJSFSchema, TranslatableString, UnsupportedFieldProps } from "@rjsf/utils"
 import Markdown from "markdown-to-jsx"
-import { Box } from "@wahab/kit/atoms/box/Box"
-import { Text } from "@wahab/kit/molecules/text/Text"
+import { Box } from "@wahab/kit"
+import { Text } from "@wahab/kit"
 
 /** The `UnsupportedField` component is used to render a field in the schema is one that is not supported by
  * react-jsonschema-form.

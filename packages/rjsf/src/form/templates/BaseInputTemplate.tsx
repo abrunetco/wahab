@@ -8,9 +8,9 @@ import {
   RJSFSchema,
   StrictRJSFSchema,
 } from "@rjsf/utils"
-// import { InputText } from "@wahab/kit/atoms/input/Input"
-import { Box } from "@wahab/kit/atoms/box/Box"
-import { InputBase } from "@wahab/kit/atoms/input/Input"
+// import { InputText } from "@wahab/kit"
+import { Box } from "@wahab/kit"
+import { InputBase } from "@wahab/kit"
 
 /** The `BaseInputTemplate` is the template to use to render the basic `<input>` component for the `core` theme.
  * It is used as the template for rendering many of the <input> based widgets that differ by `type` and callbacks only.

@@ -1,13 +1,13 @@
 import { RJSFSchema } from '@rjsf/utils';
 import React, { useState } from 'react';
-import { Table, Thead, Tr, Th, Tbody, Td } from '@wahab/kit/atoms/table/Table';
+import { Table, Thead, Tr, Th, Tbody, Td } from "@wahab/kit";
 import _ from 'lodash';
-import { Box } from '@wahab/kit/atoms/box/Box';
-import { Paginate } from '@wahab/kit/molecules/paginate/Paginate';
-import { SearchBar } from '@wahab/kit/molecules/searchBar/SearchBar';
-import { Checkbox } from '@wahab/kit/molecules/checkbox/Checkbox';
-import { Option, Select } from '@wahab/kit/molecules/select/Select';
-import { Container } from '@wahab/kit/atoms/container/Container';
+import { Box } from "@wahab/kit";
+import { Paginate } from "@wahab/kit";
+import { SearchBar } from "@wahab/kit";
+import { Checkbox } from "@wahab/kit";
+import { Option, Select } from "@wahab/kit";
+import { Container } from "@wahab/kit";
 
 type Record = { [k:string]: any } & { _id: any }
 interface TableGridProps<T extends Record = Record> {

@@ -10,9 +10,9 @@ import {
 } from "@rjsf/utils"
 
 import Label from "./FieldTemplate/Label"
-import { Box } from "@wahab/kit/atoms/box/Box";
-import { InputBase } from "@wahab/kit/atoms/input/Input";
-import { Container } from "@wahab/kit/atoms/container/Container";
+import { Box } from "@wahab/kit";
+import { InputBase } from "@wahab/kit";
+import { Container } from "@wahab/kit";
 
 /** The `WrapIfAdditional` component is used by the `FieldTemplate` to rename, or remove properties that are
  * part of an `additionalProperties` part of a schema.

@@ -1,8 +1,8 @@
 import React from "react"
 import { FormContextType, IconButtonProps, RJSFSchema, StrictRJSFSchema, TranslatableString } from "@rjsf/utils"
-import { Button } from "../@wahab/kit/atoms/button/Button"
-import { Icon } from "../@wahab/kit/atoms/icon"
-import { Box } from "../@wahab/kit/atoms/box/Box"
+import { Button } from "@wahab/kit"
+import { Icon } from "@wahab/kit"
+import { Box } from "@wahab/kit"
 
 export default function IconButton<T = any, S extends StrictRJSFSchema = RJSFSchema, F extends FormContextType = any> (
   props: IconButtonProps<T, S, F>

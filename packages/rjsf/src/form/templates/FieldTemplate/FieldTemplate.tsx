@@ -9,7 +9,7 @@ import {
 } from "@rjsf/utils"
 
 import Label from "./Label"
-import { Box } from "../@wahab/kit/atoms/box/Box"
+import { Box } from "@wahab/kit"
 
 /** The `FieldTemplate` component is the template used by `SchemaField` to render any field. It renders the field
  * content, (label, description, children, errors and help) inside of a `WrapIfAdditional` component.

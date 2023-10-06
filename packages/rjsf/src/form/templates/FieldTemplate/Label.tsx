@@ -1,7 +1,7 @@
 import React from "react";
-import { Text } from "../@wahab/kit/molecules/text/Text";
-import { Icon } from "../@wahab/kit/atoms/icon";
-import { Box } from "../@wahab/kit/atoms/box/Box";
+import { Text } from "@wahab/kit";
+import { Icon } from "@wahab/kit";
+import { Box } from "@wahab/kit";
 
 export type LabelProps = {
   label?: string;

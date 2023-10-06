@@ -12,7 +12,7 @@ import {
   getUiOptions,
   titleId,
 } from "@rjsf/utils"
-import { Fieldset } from "@wahab/kit/atoms/fieldset/Fieldset"
+import { Fieldset } from "@wahab/kit"
 
 /** The `ObjectFieldTemplate` is the template to use to render all the inner properties of an object along with the
  * title and description if available. If the object is expandable, then an `AddButton` is also rendered after all

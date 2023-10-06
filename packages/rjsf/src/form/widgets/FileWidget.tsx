@@ -10,10 +10,10 @@ import {
   WidgetProps,
 } from "@rjsf/utils"
 import Markdown from "markdown-to-jsx"
-import { Image } from "@wahab/kit/atoms/image/Image"
-import { NavLink } from "@wahab/kit/atoms/navlink/NavLink"
-import { List, ListItem } from "@wahab/kit/atoms/lists/Lists"
-import { Box } from "@wahab/kit/atoms/box/Box"
+import { Image } from "@wahab/kit"
+import { NavLink } from "@wahab/kit"
+import { List, ListItem } from "@wahab/kit"
+import { Box } from "@wahab/kit"
 
 function addNameToDataURL (dataURL: string, name: string) {
   if (dataURL === null) {

@@ -1,7 +1,0 @@
-Check
-PageFirst
-PagePrev
-PageNext
-PageLast
-Bullet
-Search

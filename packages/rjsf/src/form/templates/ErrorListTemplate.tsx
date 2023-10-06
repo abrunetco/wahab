@@ -7,9 +7,9 @@ import {
   StrictRJSFSchema,
   TranslatableString,
 } from "@rjsf/utils"
-import { Box } from "@wahab/kit/atoms/box/Box"
-import { Label } from "@wahab/kit/atoms/labelInput/LabelInput"
-import { List, ListItem } from "@wahab/kit/atoms/lists/Lists"
+import { Box } from "@wahab/kit"
+import { Label } from "@wahab/kit"
+import { List, ListItem } from "@wahab/kit"
 
 /** The `ErrorList` component is the template that renders the all the errors associated with the fields in the `Form`
  *

@@ -1,6 +1,5 @@
 import React, { PropsWithChildren } from 'react'
-import { Box } from "@wahab/kit/atoms/box/Box"
-import { Form } from '@wahab/kit/atoms/form/Form'
+import { Form } from '@wahab/kit'
 
 export default function InternalFormWrapper(props: PropsWithChildren<{}>) {
   return (

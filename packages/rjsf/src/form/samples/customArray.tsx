@@ -1,8 +1,8 @@
 import React from "react";
-import { Box } from "@wahab/kit/atoms/box/Box";
-import { Button } from "@wahab/kit/atoms/button/Button";
-import { Container } from "@wahab/kit/atoms/container/Container";
-import { Text } from "@wahab/kit/molecules/text/Text";
+import { Box } from "@wahab/kit";
+import { Button } from "@wahab/kit";
+import { Container } from "@wahab/kit";
+import { Text } from "@wahab/kit";
 const ArrayFieldTemplate: React.FC<{ className: string; items?: any[]; canAdd?: boolean; onAddClick: () => void }> = ({
   className,
   items,

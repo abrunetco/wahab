@@ -1,8 +1,8 @@
 import React, { forwardRef, ComponentType, PropsWithChildren, ForwardRefExoticComponent, PropsWithoutRef, RefAttributes } from "react"
 import { withTheme, ThemeProps, getDefaultRegistry } from "@rjsf/core"
-import { Box } from "@wahab/kit/atoms/box/Box"
+import { Box } from "@wahab/kit"
 import { ColorProp } from "../../styled/types"
-import { Span } from "@wahab/kit/atoms/text/Text"
+import { Span } from "@wahab/kit"
 import _ from "lodash"
 import * as WahabTemplates from './templates'
 import * as WahabWidgets from './widgets'
