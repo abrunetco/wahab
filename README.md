@@ -5,15 +5,15 @@ briliant
 ## Install
 - for core kit package
 ```
-yarn add '@wahab/kit@https://gitpkg.now.sh/abrunetco/wahab/packages/kit?alpha''
+yarn add '@wahab/kit@https://gitpkg.now.sh/abrunetco/wahab/packages/kit?alpha'
 ```
 - for icons package
 ```
-yarn add '@wahab/icons@https://gitpkg.now.sh/abrunetco/wahab/packages/icons?alpha''
+yarn add '@wahab/icons@https://gitpkg.now.sh/abrunetco/wahab/packages/icons?alpha'
 ```
 - for RJSF package
 ```
-yarn add '@wahab/rjsf@https://gitpkg.now.sh/abrunetco/wahab/packages/rjsf?alpha''
+yarn add '@wahab/rjsf@https://gitpkg.now.sh/abrunetco/wahab/packages/rjsf?alpha'
 ```
 
 ## Usage
